@@ -1,8 +1,8 @@
 # NORDIC DLSS5
 
-[Download the Windows installer](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.1-alpha.1/NordicDLSS5.exe) · [Manual add-on ZIP](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.1-alpha.1/NORDIC-DLSS5-Addon-v0.7.1-alpha.1.zip) · [First alpha release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.1-alpha.1)
+[Download the Windows installer](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.3-alpha.3/NordicDLSS5.exe) · [Manual add-on ZIP](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.3-alpha.3/NORDIC-DLSS5-Addon-v0.7.3-alpha.3.zip) · [Alpha 3 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.3-alpha.3)
 
-![NORDIC DLSS5 — launcher and overlay preview](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.1-alpha.1/NORDIC-DLSS5-Preview.png)
+![NORDIC DLSS5 — launcher and overlay preview](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.3-alpha.3/NORDIC-DLSS5-Preview.png)
 
 An experimental, visual-quality-focused Neural Rendering tool, built around a balance of image quality, performance and a straightforward interface.
 
@@ -31,6 +31,17 @@ Testing so far is limited to **The Witcher 3, Baldur's Gate 3 and a couple of ot
 4. The supported runtime in this alpha is **310.9.16.0**, SHA-256 `2bc19bc09a7b89dd44f73e2ac0108fcc586e2154bdd0830f242f4f040e28789f`. A different build is rejected; renaming another DLL will not work. This pin is a compatibility check, not a redistribution license or a promise that it is the newest build.
 5. Close the game before installation, enable its native DLSS SR/RR path, then start it with Play. A runtime already imported by an earlier NORDIC installation is reused.
 
+## Changes in Alpha 3
+
+- Fix the reproduced TW3 Frame Generation overlay hang: prepare native Manrope glyph sizes and UI geometry buffers during startup, before gameplay. Keep prepared sizes alive without repeating glyph rasterization.
+- Avoid an extra submission from Nordic's Present callback; ReShade submits the ordered NR/effects/overlay work at the end of presentation.
+- Buttons, toggles and model selectors react on the press edge instead of depending on a later sampled release. Keyboard navigation remains available.
+- Keep the earlier non-blocking UI snapshots, safe startup-device rebind and shared/private overlay switching.
+- Launch Steam games through Steam, preserve the selected game's persistent highlight, and use physical-pixel button borders.
+- Keep Bear + Serpent enabled at startup, Serpent at 87% intensity, Present as the default, and each game's saved tuning.
+
+The previous alpha was withdrawn after the reported TW3 + Frame Generation freeze. Local thread captures identified a synchronous ReShade DX12 font upload on the FG presentation thread. Live TW3 DX12/FG testing of the final build verified repeated Pipeline expansion/collapse, model selection, fine tuning, a saved Local Tone edit and a tooltip while both neural passes continued running. Separate laboratory checks passed for repeated shared/private overlay switching and input polling under engine contention. This is one tested system and game configuration, not general Frame Generation certification.
+
 ## Compact interface update
 
 The approved angular N logo uses small plus signs as a mountain ridge and white snow at its feet. The heading is tightly set Manrope vector lettering. Game library rows and Bear/Falcon/Serpent selectors are **50% lower**, while the body font stays readable. Store and renderer details for library rows are available on hover and in the selected-game overview.
@@ -41,9 +52,9 @@ Use Windows 10/11 x64, .NET Framework 4.8, a compatible NVIDIA GPU/driver and a 
 
 Backslash opens the Nordic panel; F10 is the keyboard-layout fallback. Escape closes it. Insert opens shared ReShade. F6 toggles processing, F7 compares and F8 resets history.
 
-**Frame Generation compatibility is still unconfirmed in direct TW3 testing.** GPU/resource-lifetime and rendering-path tests in the laboratory do not certify a live game or every fullscreen/HDR combination.
+**Frame Generation coverage remains limited.** The reported TW3 Present-overlay freeze was retested live; other games, drivers, rendering points and fullscreen/HDR combinations are not certified.
 
-Core 0.7.1 / Setup 0.5.4. The installer is unsigned. Updates currently come from new downloaded builds; no automatic update service is configured.
+Core 0.7.3 / Setup 0.5.6. The installer is unsigned. Updates currently come from new downloaded builds; no automatic update service is configured.
 
 NORDIC supplies its own integration and UI. The NR networks and runtime are NVIDIA's property; Bear/Falcon/Serpent name their selectable styles, not independently trained NORDIC models. This is unofficial experimental interoperability, not an NVIDIA-endorsed integration. Third-party components retain their own licenses.
 
