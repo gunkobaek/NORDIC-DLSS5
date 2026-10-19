@@ -1,35 +1,39 @@
 # NORDIC DLSS5
 
-[Windows installer](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.7-alpha.9/NordicDLSS5.exe) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.7-alpha.9/NORDIC-DLSS5-Addon-v0.7.7-alpha.9.zip) | [Alpha 9 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.7-alpha.9)
+[Windows installer](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.7-alpha.10/NordicDLSS5.exe) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.7-alpha.10/NORDIC-DLSS5-Addon-v0.7.7-alpha.10.zip) | [Alpha 10 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.7-alpha.10)
 
-![Interface preview](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.7-alpha.9/NORDIC-DLSS5-Preview.png)
+![Interface preview](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.7-alpha.10/NORDIC-DLSS5-Preview.png)
 
-# NORDIC DLSS5 - Alpha 9 / Custom overlay shortcuts
+# NORDIC DLSS5 — Alpha 10 / Shortcut persistence
 
-Core **0.7.7** / Setup **0.5.12**.
+Setup **0.5.13** / Core **0.7.7** (unchanged).
 
-You can now choose the Nordic overlay shortcut for each game from the launcher:
+## Fixed in the launcher
 
-1. Select the game in the library and open **Options**.
-2. Click **Overlay shortcut**, then press a key, optionally with Ctrl, Alt and/or Shift.
-3. Click **Done** and restart the game.
+- A valid custom overlay shortcut now saves immediately. Closing Options with X no longer discards it; pressing Done is not required for this setting.
+- Resetting the shortcut to Default also saves immediately.
+- If saving fails, Options reports **Not saved** and retains the previous binding.
+- The launcher remembers the last highlighted game on close and restores it on reopening. Rescanning retains the current selection.
+- Options names the game's executable beside its shortcut, so per-game settings are easier to identify.
 
-**Default** restores backslash. F10 is only the fallback when the active keyboard layout cannot produce backslash without modifiers. Esc still closes Nordic. Reserved Nordic/Windows keys and conflicts with the configured ReShade overlay shortcut are rejected. Choose a shortcut that your game does not use.
+Select a game, open **Options**, click its shortcut and press the new key or combination. **Restart the game** to use the saved binding. Ctrl, Alt and Shift combinations are supported; reserved keys and conflicts with the configured ReShade shortcut remain rejected. Other games retain their own shortcuts.
 
-The choice is saved per game, separately from neural tuning and UI scale, and survives add-on updates. It can also be set before installing the add-on. Diagnostics display the active shortcut.
+## Update
 
-## Updating
+Use **… → Check for updates now**, or let the installed launcher's automatic startup check apply the update. Confirm **SETUP 0.5.13**. If you already have Core 0.7.7, no add-on reinstall is needed for this launcher fix. If your game still uses an older core, close it and choose **Install/Update selected**. Updating the EXE alone does not update game add-ons.
 
-Use the launcher's **... > Check for updates now**, or its startup update check. Confirm **SETUP 0.5.12**, close the game, and use **Install/Update selected** to install **Core 0.7.7**. Updating the EXE alone does not replace the add-on inside games. Older unregistered standalone launchers may need one manual download.
+Older unregistered standalone copies may require a manual EXE download once.
 
-## Validation and alpha limitations
+## Validation and limitations
 
-96 installer/editor/preservation checks and 25 updater checks passed. The C++ reader correctly reads the launcher-written INI and matches launcher key validation. Six synthetic keyboard-event checks through the isolated ReShade DX12 laboratory cover custom opening/closing, the retired default binding and missing modifiers. This is not a new live TW3, exclusive fullscreen or Frame Generation certification.
+104 installer/editor/persistence checks and 26 updater checks passed, including Alpha 9 → Alpha 10 release selection. The previously failing close-without-Done regression now passes. The native reader also reads the saved shortcut correctly in a separate process. These are isolated tests, not new live-game or Frame Generation certification.
 
-Includes the Alpha 8 overlay pointer-coordinate fix. Existing tuning is preserved. New installs retain Bear + Serpent enabled, Serpent intensity 87%, Local Tone 0.45, and Present with Required guides. With FG detected, Present uses the pre-FG compatibility route; full ReShade/Reno controls require a session started with FG disabled.
+This release fixes launcher settings persistence. It does **not** claim to resolve the separately reported TW3 hard crash; its cause remains under investigation.
 
-Bring your own supported NVIDIA NR runtime: the original 310.9.16.0 or the explicitly recognized experimental community FP16 profile. These are verified by exact hash, not just version. No NVIDIA/community runtime is bundled or downloaded. The FP16 variant has only been laboratory-tested on RTX 5090; older RTX compatibility remains unverified. Vulkan is unsupported.
+NORDIC remains experimental alpha software focused on visual quality and two-pass tuning. New installs use Bear + Serpent enabled, Serpent intensity 87%, Local Tone 0.45, and Present with Required guides. With FG detected, Present uses the pre-FG compatibility route. Full ReShade/Reno controls require a session started with FG disabled.
 
-Still alpha: expect bugs. Almost-daily fixes and more controls are planned. Reports: send Gunko/Gunko.log beside the game EXE, a Preferences & diagnostics screenshot, GPU/driver and DLSS/FG settings. Installation logs: **... > Activity log / Open log folder**.
+Bring your own supported NVIDIA NR runtime: original 310.9.16.0 or the specifically recognized experimental community FP16 profile, verified by exact hash. No NVIDIA/community DLL is bundled or downloaded. Older RTX compatibility remains unverified; Vulkan is unsupported.
+
+For problems, send Gunko/Gunko.log and ReShade.log from the game executable's folder, any crash report/dump, GPU and driver, DLSS/FG settings, and what you did immediately before the failure. Launcher logs: **… → Activity log / Open log folder**.
 
 The combined preview is a promotional composition, not a live game capture. This repository distributes alpha binaries and documentation; integration source is not currently published.
