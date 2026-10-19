@@ -1,5 +1,8 @@
 # NORDIC DLSS5
 
+> **Known issues under investigation:** with Frame Generation enabled, opening full ReShade using **INS** can freeze TW3. **Use backslash (`\`) to open Nordic only.** Alt+Tab may interrupt NR and Present can flicker. An updated alpha is being tested; these issues are not yet declared fixed. The 0.7.3 launcher has no automatic updater.
+
+
 [Download the Windows installer](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.3-alpha.3/NordicDLSS5.exe) · [Manual add-on ZIP](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.3-alpha.3/NORDIC-DLSS5-Addon-v0.7.3-alpha.3.zip) · [Alpha 3 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.3-alpha.3)
 
 ![NORDIC DLSS5 — launcher and overlay preview](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.3-alpha.3/NORDIC-DLSS5-Preview.png)
