@@ -1,8 +1,29 @@
 # NORDIC DLSS5
 
-[Windows installer](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.4-alpha.4/NordicDLSS5.exe) · [Manual add-on ZIP](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.4-alpha.4/NORDIC-DLSS5-Addon-v0.7.4-alpha.4.zip) · [Alpha 4 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.4-alpha.4)
+[Windows installer](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.4-alpha.5/NordicDLSS5.exe) · [Manual add-on ZIP](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.4-alpha.5/NORDIC-DLSS5-Addon-v0.7.4-alpha.5.zip) · [Alpha 5 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.4-alpha.5)
 
-![NORDIC DLSS5 launcher and overlay preview](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.4-alpha.4/NORDIC-DLSS5-Preview.png)
+![NORDIC DLSS5 launcher and overlay preview](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.4-alpha.5/NORDIC-DLSS5-Preview.png)
+
+# NORDIC DLSS5 — Alpha 5 / Runtime detection hotfix
+
+This is a **launcher/installer hotfix**: Setup **0.5.8**, with the exact same Core **0.7.4** add-on as Alpha 4. No game rendering code or tuning defaults changed.
+
+- Runtime discovery now checks contents before showing **Verified**, instead of trusting only the file version. Incompatible files are rejected immediately when selected, with the detected version and checksum in the error.
+- Read-only automatic search covers the verified personal cache, a remembered selection, existing Nordic runtime.ini paths, game executable folders, common parent/bin layouts, game subfolders, the launcher folder and local Downloads. Recursive discovery is bounded to three levels, 2,048 folders, 128 candidate DLLs and an approximate 20-second search budget. Use **Locate** for files outside that scope; archives must be extracted first.
+- A stale or incompatible automatic candidate no longer hides a compatible file elsewhere. Selecting **Find runtime again** in the ⋯ menu repeats the search.
+- Verification runs in the background so the library remains responsive. Install stays disabled until a compatible runtime has been verified; installation still rechecks it before importing.
+- **Activity log** shows its file location and can reopen the last installation log after restarting the launcher. **Open log folder** is available in the ⋯ menu, and installation errors show the log path.
+- Installed Alpha 4 launchers can receive this hotfix automatically at startup, or through **⋯ → Check for updates now**. Game add-on files are unchanged and do not need reinstalling for this launcher-only fix. Alpha 3/0.7.3 launchers need a one-time manual EXE update.
+
+**This does not add support for a different NVIDIA binary.** The required runtime is still the original nvngx_dlssnr.dll **310.9.16.0** with SHA-256:
+
+`2bc19bc09a7b89dd44f73e2ac0108fcc586e2154bdd0830f242f4f040e28789f`
+
+A different GPU-specific build may not be compatible even if the version label looks the same. Changing runtime.ini's checksum or renaming a DLL does not convert it. If discovery cannot find this exact supported file, use Locate to select your own original runtime from an authorized source. The public EXE/ZIP do not include or download NVIDIA DLLs.
+
+**Still experimental alpha: expect bugs.** This fix was checked with 16 runtime-discovery cases, 71 transactional installer checks, 18 updater checks, 20 launcher/menu checks, setup-progress checks and read-only discovery of the actual required runtime on the author's machine. The unchanged native add-on retains the limited TW3 + Frame Generation validation described in Alpha 4; no new game/GPU compatibility claim is made by this hotfix.
+
+## Core 0.7.4 details and limitations
 
 An experimental Neural Rendering tool focused on visual quality, performance and an interface that is easy to use. NORDIC is designed around **two independently tuned neural passes inside one add-on**. The default stack is **Bear → Serpent**, with my TW3-focused tuning and Serpent at **87% intensity**. Falcon is also selectable in either pass.
 
@@ -44,8 +65,8 @@ The isolated laboratories cover genuine NVIDIA neural inference, mixed network h
 
 The final build is also checked locally in **TW3 DX12 with Frame Generation enabled** before publication. This remains one machine/configuration, not a guarantee for other games, drivers, RTX generations or exclusive fullscreen. The laboratories' synthetic timings are not game FPS or a general temporal-quality assessment. Full ReShade with FG is guarded as described above.
 
-Core **0.7.4** / Setup **0.5.7**. Windows 10/11 x64 and .NET Framework 4.8. The installer is unsigned.
+Core **0.7.4** / Setup **0.5.8**. Windows 10/11 x64 and .NET Framework 4.8. The installer is unsigned.
 
 The NVIDIA networks/runtime remain NVIDIA's property. NORDIC supplies its integration and UI; Bear/Falcon/Serpent are style names, not independently trained NORDIC networks. This is unofficial experimental interoperability, not an NVIDIA SDK integration or endorsement. Included components retain their own licenses. No LecramDev or ShortFuse add-on, installer or bridge is required.
 
-The combined preview is a promotional composition based on the launcher and isolated overlay laboratory, not a live game capture. Separate launcher, overlay and setup images are included in the release. This repository distributes alpha binaries and documentation; it does not currently publish the integration source code.
+The combined preview is a promotional composition, not a live game capture. The repository distributes alpha binaries and documentation; integration source code is not currently published.
