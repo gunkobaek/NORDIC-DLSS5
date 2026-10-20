@@ -1,55 +1,48 @@
 # NORDIC DLSS5
 
-[Windows installer](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.8-beta.1/NordicDLSS5.exe) · [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.8-beta.1/NORDIC-DLSS5-Addon-v0.7.8-beta.1.zip) · [Beta 01 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.8-beta.1)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.11-beta.2/NordicDLSS5.exe) | [Beta 02 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.11-beta.2) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.11-beta.2/NORDIC-DLSS5-Addon-v0.7.11-beta.2.zip)
 
-**Setup 0.5.35 / Core 0.7.8 — first launcher beta.** A personal visual-quality tool built around two independently tuned NVIDIA NR passes. Frequent updates and more controls are planned; expect bugs.
+**Launcher 0.5.39 / Add-on Core 0.7.11**
 
-![Nordic launcher interface fixture](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.8-beta.1/Nordic-Launcher-Preview.png)
+Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## The new launcher
+## What's new in Beta 02
 
-The resizable WebView2 interface combines compact Lato text, a snowy mountain banner, brown and lavender surfaces, white Steam icons, bronze Collector artwork frames and DVD-style art beside Play. Cinema and Spotlight add warm button lighting. Two raster lamps stay on the rail above the games; use **Lighting → Arrange & aim** to tilt their beams, then adjust **Power** and **Drama**. Drag a head horizontally to slide or diagonally down to aim; its mounting stays on the rail. Bronze gesture icons appear only during the gesture. Placement and lighting are saved. List, Grid and Cinema views reuse the same library, with aligned favorites and personal half-star ratings. Install options, profile selection, cleanup reviews, update prompts and reports share the new WebView design. Play and Nordic ON/OFF stay on one horizontal row.
+- Fixed HDR color shifts that could turn warm highlights green.
+- Improved selection, menu responsiveness and recovery after inactivity.
+- Refreshed the in-game overlay with the Nordic theme, clearer controls and pinned health status.
+- Updated the Classic look to use the current NR 310.9.16.0 DLL with Render Preset 1 on both passes.
 
-Bulk selection now refreshes once, file inspection runs in the background, and window move/resize pauses UI polling. Profiles, ratings, cleanup/Restore, updates and the **Nordic ON/OFF before launch** control remain available. Windows 10/11 x64, .NET Framework 4.8 and Microsoft Edge WebView2 Runtime are required.
+## Your library, in a new light
 
-This beta changes the launcher. The Core 0.7.8 add-on is unchanged, so there is no new claim that all TW3 crashes are fixed. Older launchers receive the identical beta EXE through the Alpha 13 update bridge, then understand future beta tags.
+NJOL brown and lavender, a snowy mountain banner, Lato text, Steam icons, Collector artwork and a DVD-style selected-game display. Choose List, Grid or Cinema, save favorites and rate games in half-star steps.
 
-## Older NR and the default
+Two warm spotlights sit above the library. Drag horizontally to slide them or diagonally down to aim; the mounts stay on the rail. Lighting > Arrange & aim provides handles, while Power and Drama shape the scene. Spotlight, Cinema and Snow add motion to buttons. Placement, lighting and preferences are saved.
 
-The signed **NVIDIA NR 310.8.0.0** is now supported and has been exercised in **TW3, DirectX 12, with Frame Generation on RTX 5090**, followed by user confirmation. The same native binary recorded about 94,900 submitted frames and 94,887 GPU completions without recorded device loss. Pipeline, model selection, Intensity and Fine Details responded; processing continued after switching away and returning to gameplay. This is bounded validation, not a guarantee that every reported crash is fixed.
+Nordic ON/OFF beside Play controls whether the add-on loads before starting a game. Saved tuning remains available when it is OFF. Profiles, backup/Restore, add-on cleanup and update prompts are built into the launcher.
 
-New installs use **`gunko_tw3_old_model`**, Gunko's current TW3 tuning: Bear + Serpent, intensity **100% / 79.78%**, resolution scales **90.2248% / 75.4437%**, Present requested and Required guides. It targets the old signed 310.8.0 runtime. Its stronger-looking result is a visual preference, not a measured universal advantage. Other games may need different tuning.
+## Update the launcher and games
 
-## Profiles and installation
+Accept Update now in the installed launcher, use Check for updates now, or download and run NordicDLSS5.exe. Then close your games, select them and choose Update selected, or use Update all installed game add-ons. Updating the launcher alone does not update the add-on files in games. Ordinary updates preserve existing tuning.
 
-1. Open the launcher and locate your own supported **nvngx_dlssnr.dll**. The default profile requires **310.8.0.0**, SHA-256 `e16bcf15e16e13f527491cdf7845b2fe6521a738d8f7c9c721866a8496e1fc8e`.
-2. Check games in the library or use **All**. Choose the game's DirectX executable; native DLSS inputs are required. DX11 uses Nordic's included GPU bridge; Vulkan is unsupported.
-3. Open **Profiles**, select `gunko_tw3_old_model`, then **Apply to selected games**. This installs/updates Nordic, replaces tuning and selects the matching locally available runtime for each game. Games must be closed; verified backups and **Restore** are provided.
-4. Start through **Play**; Steam games launch through Steam. Open Nordic with **backslash** by default. **F10 is only the keyboard-layout fallback.** Set a custom shortcut in **Options**, then restart the game.
+## Classic quality with the current DLL
 
-![Look profiles interface fixture](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.8-beta.1/Nordic-Profiles-Preview.png)
+The current NVIDIA NR 310.9.16.0 DLL includes the older Classic network under **Render Preset 1**. **Render Preset 2** selects the newer, faster network. These are separate from the Bear, Falcon and Serpent style buttons. Select Preset 1 on both passes for the full Classic look. Classic is the quality-focused option and uses more GPU resources; the preferred look depends on the game and scene.
 
-Save current tuning and its runtime fingerprint under your own name, or choose a default for new installs. Close the game before saving. Ordinary updates preserve existing game tuning; explicitly applying a profile replaces it. Hotkeys and UI scale stay per-game. An **edited** label means tuning/runtime differs from the stored profile. Reapply a profile to recover its exact recipe; the overlay's generic Reset tuning is separate.
+Open Profiles, choose **Gunko / TW3 / Classic NR** (`gunko_tw3_old_model`) and Apply to selected games. The default uses Gunko's TW3 Bear + Serpent tuning with Preset 1 on both passes and the current DLL. Applying a profile replaces tuning and creates a backup. The older signed 310.8.0.0 runtime remains available as a separate choice.
 
-No NVIDIA/community NR DLL is bundled or downloaded. Nordic verifies exact fingerprints and keeps separate personal caches, preserving the game's DLSS SR/RR, FG and Streamline DLLs. Signed 310.9.16 and the recognized experimental FP16 variant remain available through **Change**. Both passes use the one runtime selected for the Nordic stack. Switching needs install/update and game restart. RTX 20/30/40 compatibility remains unverified here. The exported profile JSON contains tuning and a fingerprint only.
+Locate your own compatible nvngx_dlssnr.dll in the launcher. No NVIDIA runtime is included or downloaded. Nordic preserves each game's own DLSS SR, Ray Reconstruction, Frame Generation and Streamline DLLs. Restart the game after updating or switching runtime.
 
-## Other changes
+## In game and recovery
 
-- **Clean add-ons:** exact-file preview, verified external backup and Restore. Unknown proxy mods/game NVIDIA DLLs are retained; nothing is cleaned automatically.
-- **Pinned health:** Healthy requires recent GPU-completed NR work. Waiting, Disabled, Bypassed and GPU error have distinct states; Healthy is not a visual-quality guarantee.
-- **Controls:** native Intensity 0–1, bounded luminance Fine Details, six neutral-by-default Nordic post-model controls, per-pass numeric render presets. Legacy 310.8.0 ignores the tested preset hints, so its selector is disabled.
-- **Launcher:** flat violet selection, Installed subtitles, batch selection, saved custom shortcut, Steam Play, support export, last-session evidence, game-update queue and rollback history.
+Backslash opens Nordic; F10 is the keyboard-layout fallback. Escape closes it. F6 toggles processing and F7 compares the image. Set a custom shortcut in Options and restart the game.
 
-With FG detected, requested **Present** uses the visible **Upscaled pre-FG compatibility route**. Full ReShade/Reno controls require starting the session with FG disabled. Nordic's private panel is recommended during FG.
+Rendered, Upscaled and Present choose where Nordic applies. With Frame Generation active, Present uses the before-FG compatibility route. Healthy means recent NR processing is completing. Waiting, Disabled, Bypassed and GPU error have their own status.
 
-## Updating
+Clean add-ons previews the exact files and saves a backup. Restore recovers the previous files. Games must be closed for updates, cleanup and restoration. Unknown proxy mods and unrelated game files are retained.
 
-The installed launcher checks GitHub at startup and every 30 minutes. Accept **Update now** to download, verify and restart, or choose **Later**. Use **… → Check for updates now** manually. Older standalone copies may need one manual EXE download.
+## Requirements and feedback
 
-Updating the launcher alone does not replace game add-ons or apply a new look to existing tuning. Close games and use **Install/Update selected**, **Update all installed game add-ons**, or opt in to automatic game updates. Keep Nordic open for queued updates; running games wait. Use **Profiles → Apply to selected games** for the new look and old runtime on existing installations.
+Windows 10/11 x64, .NET Framework 4.8, Microsoft Edge WebView2 Runtime and a compatible NVIDIA NR runtime. Games need native DLSS inputs and a supported DirectX 11 or DirectX 12 executable. BG3 requires bg3_dx11.exe; Vulkan is unsupported. The beta is unsigned and compatibility varies by game and GPU.
 
-## Testing and bug reports
-
-Profile/application/rollback, installer, cleanup, discovery, management, updater and UI fixtures passed. Real three-style/two-pass 310.8.0 SDR/HDR, DX11 bridge and UI laboratories passed on RTX 5090; 310.9.16 regression checks passed. See **VALIDATION.json** in the release. This does not establish every game's/GPU's compatibility. Previews are interface/laboratory fixtures, not live captures of named games. This repository distributes binaries and documentation; integration source is not published.
-
-Report via [GitHub Issues](https://github.com/gunkobaek/NORDIC-DLSS5/issues) or your existing tester contact. Include build, GPU/driver, game/renderer, DLSS/FG settings and steps. Send **Gunko/Gunko.log**, **ReShade.log** and crash reports from beside the game executable. Launcher logs: **… → Activity log / Open log folder**. **Diagnostics → Export support bundle** collects local evidence; review before sharing. Nothing is uploaded automatically.
+Report problems through [GitHub Issues](https://github.com/gunkobaek/NORDIC-DLSS5/issues) or your existing tester thread. Include the game, build, GPU/driver and steps to reproduce. Diagnostics exports a support bundle locally; review it before sharing. Nothing is uploaded automatically.
