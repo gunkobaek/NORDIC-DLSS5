@@ -1,12 +1,20 @@
 # NORDIC DLSS5
 
-[Windows installer](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.8-alpha.11/NordicDLSS5.exe) · [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.8-alpha.11/NORDIC-DLSS5-Addon-v0.7.8-alpha.11.zip) · [Alpha 11 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.8-alpha.11)
+[Windows installer](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.8-beta.1/NordicDLSS5.exe) · [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.8-beta.1/NORDIC-DLSS5-Addon-v0.7.8-beta.1.zip) · [Beta 01 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.8-beta.1)
 
-**Setup 0.5.19 / Core 0.7.8 — experimental alpha.** A personal visual-quality tool built around two independently tuned NVIDIA NR passes. Frequent updates and more controls are planned; expect bugs.
+**Setup 0.5.35 / Core 0.7.8 — first launcher beta.** A personal visual-quality tool built around two independently tuned NVIDIA NR passes. Frequent updates and more controls are planned; expect bugs.
 
-![Nordic launcher interface fixture](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.8-alpha.11/Nordic-Launcher-Preview.png)
+![Nordic launcher interface fixture](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.8-beta.1/Nordic-Launcher-Preview.png)
 
-## Older NR and the new default
+## The new launcher
+
+The resizable WebView2 interface combines compact Lato text, a snowy mountain banner, brown and lavender surfaces, white Steam icons, bronze Collector artwork frames and DVD-style art beside Play. Cinema and Spotlight add warm button lighting. Two raster lamps stay on the rail above the games; use **Lighting → Arrange & aim** to tilt their beams, then adjust **Power** and **Drama**. Drag a head horizontally to slide or diagonally down to aim; its mounting stays on the rail. Bronze gesture icons appear only during the gesture. Placement and lighting are saved. List, Grid and Cinema views reuse the same library, with aligned favorites and personal half-star ratings. Install options, profile selection, cleanup reviews, update prompts and reports share the new WebView design. Play and Nordic ON/OFF stay on one horizontal row.
+
+Bulk selection now refreshes once, file inspection runs in the background, and window move/resize pauses UI polling. Profiles, ratings, cleanup/Restore, updates and the **Nordic ON/OFF before launch** control remain available. Windows 10/11 x64, .NET Framework 4.8 and Microsoft Edge WebView2 Runtime are required.
+
+This beta changes the launcher. The Core 0.7.8 add-on is unchanged, so there is no new claim that all TW3 crashes are fixed. Older launchers receive the identical beta EXE through the Alpha 13 update bridge, then understand future beta tags.
+
+## Older NR and the default
 
 The signed **NVIDIA NR 310.8.0.0** is now supported and has been exercised in **TW3, DirectX 12, with Frame Generation on RTX 5090**, followed by user confirmation. The same native binary recorded about 94,900 submitted frames and 94,887 GPU completions without recorded device loss. Pipeline, model selection, Intensity and Fine Details responded; processing continued after switching away and returning to gameplay. This is bounded validation, not a guarantee that every reported crash is fixed.
 
@@ -19,7 +27,7 @@ New installs use **`gunko_tw3_old_model`**, Gunko's current TW3 tuning: Bear + S
 3. Open **Profiles**, select `gunko_tw3_old_model`, then **Apply to selected games**. This installs/updates Nordic, replaces tuning and selects the matching locally available runtime for each game. Games must be closed; verified backups and **Restore** are provided.
 4. Start through **Play**; Steam games launch through Steam. Open Nordic with **backslash** by default. **F10 is only the keyboard-layout fallback.** Set a custom shortcut in **Options**, then restart the game.
 
-![Look profiles interface fixture](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.8-alpha.11/Nordic-Profiles-Preview.png)
+![Look profiles interface fixture](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.8-beta.1/Nordic-Profiles-Preview.png)
 
 Save current tuning and its runtime fingerprint under your own name, or choose a default for new installs. Close the game before saving. Ordinary updates preserve existing game tuning; explicitly applying a profile replaces it. Hotkeys and UI scale stay per-game. An **edited** label means tuning/runtime differs from the stored profile. Reapply a profile to recover its exact recipe; the overlay's generic Reset tuning is separate.
 
