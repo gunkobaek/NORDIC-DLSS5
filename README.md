@@ -1,22 +1,27 @@
 # NORDIC DLSS5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.17-beta.4/NordicDLSS5.exe) | [Beta 04 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.17-beta.4) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.17-beta.4/NORDIC-DLSS5-Addon-v0.7.17-beta.4.zip)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.18-beta.5/NordicDLSS5.exe) | [Beta 05 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.18-beta.5) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.18-beta.5/NORDIC-DLSS5-Addon-v0.7.18-beta.5.zip)
 
-**Launcher 0.5.59 / Add-on Core 0.7.17**
+**Launcher 0.5.60 / Add-on Core 0.7.18**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in Beta 04
+## What's new in Beta 05
 
-- Fixed a startup crash affecting Baldur's Gate 3 with Nordic enabled and improved DX11 compatibility.
-- Added Skellig support for exclusive fullscreen in DX11 and DX12. Its five designs, position and size remain configurable from the launcher.
-- Clarified runtime and profile labels: **Latest NR · 310.9.16.0** identifies the current supported DLL; **Preset 1 · Classic** identifies the older network available inside that DLL. Your selected model and tuning are preserved.
+- Added a global Nordic shortcut in Options. Set one key for all installed Nordic games and use it as the default for new installations. ReShade shortcut conflicts are checked before saving.
+- INS now opens the full ReShade interface, including other add-ons such as RenoDX, independently of Nordic. Open Nordic with backslash or your chosen launcher keybind.
+- Skellig now shows **FG** followed by **FPS** across all five designs. FG measures displayed frames, including generated frames when reported; FPS measures application frames before generation, including with Super Resolution enabled. AVG and the frame-time graph use application frames.
+- Preserved the existing Skellig artwork and refined the placement of the average counter and graph.
 
 ## Skellig performance monitor
 
 Skellig runs as a separate app managed from its own launcher tab. Choose Compact, Cinema, Instrument, Frost or Bare. Set position and size on the Frost Terminal preview for 16:9, 21:9 or 32:9. Save for one game or share the position and monitor settings across all games while retaining their own design, size and on/off preference.
 
-Enable at game launch or use Start Skellig. F9 toggles visibility while the target game is focused. Supports windowed, borderless and exclusive fullscreen in DX11 and DX12. For fullscreen support, enable Skellig and launch the game from Nordic; restart the game after enabling this support for the first time. Layout changes apply at the next Skellig start. Windows requests administrator permission for FPS capture. FPS and average FPS use application presents; generated display frames may differ. CPU sensors require Libre Hardware Monitor or Open Hardware Monitor with WMI enabled. Missing readings show N/D.
+Enable at game launch or use Start Skellig. F9 toggles visibility while the target game is focused. Supports windowed, borderless and exclusive fullscreen in DX11 and DX12. For fullscreen support, enable Skellig and launch the game from Nordic; restart the game after enabling this support for the first time. Layout changes apply at the next Skellig start. Windows requests administrator permission for FPS capture. FG measures displayed frames, including generated frames when reported. FPS measures application frames before generation, including with Super Resolution enabled. AVG and the frame-time graph use application frames. Availability depends on game/driver telemetry; unsupported or unavailable values show N/D. CPU sensors require Libre Hardware Monitor or Open Hardware Monitor with WMI enabled. Missing readings show N/D.
+
+## Nordic and ReShade shortcuts
+
+INS opens the full ReShade interface. Open Nordic with backslash, its F10 keyboard-layout fallback, or your chosen keybind. Options > Global Nordic Shortcut applies one key to all installed Nordic games and saves the default for new installations. Individual game overrides remain available. Restart running games after changing their shortcut.
 
 ## Your library, in a new light
 
