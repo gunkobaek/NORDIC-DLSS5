@@ -1,19 +1,18 @@
 # NORDIC DLSS5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.25-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.25-beta.1) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.25-beta.1/NORDIC-DLSS5-Addon-v0.7.25-beta.1.zip)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.26-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.26-beta.1) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.26-beta.1/NORDIC-DLSS5-Addon-v0.7.26-beta.1.zip)
 
-**Launcher 0.5.70 / Add-on Core 0.7.25**
+**Launcher 0.5.71 / Add-on Core 0.7.26**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in 0.5.70
+## What's new in 0.5.71
 
-- Fixed multi-second launcher freezes when switching games, including rapid repeated selections.
-- Improved window dragging and responsiveness while keeping the existing graphics, animations and hardware acceleration.
-- Clicking a game selects it as the single target. Use the checkboxes to select multiple games.
-- Added a Settings button in Frost Studio for interface scale and locking or unlocking the panel position.
-- Added Save, Save as, Load and Save and apply to other games, with profiles shared between the in-game add-on and desktop launcher.
-- Reduced in-game add-on CPU overhead while preserving neural rendering quality and existing tuning.
+- Added Film Softness to tame Bear (Model A) oversharpening and excessive microcontrast while retaining fine detail and color.
+- Added fine, organic, animated Film Grain, shaped by luminance to protect deep blacks and bright highlights.
+- Pair Film Softness with Native HDR or Cinema HDR to help reduce oversaturation and overly red faces or lips while retaining detail.
+- Both controls are available in **Look > Film**, save with your shared profiles and can be reset independently of the rest of your look.
+- Both start at zero, preserving your existing image until you enable them.
 
 ## Skellig performance monitor
 
