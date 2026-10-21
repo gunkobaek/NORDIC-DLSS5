@@ -1,18 +1,16 @@
 # NORDIC DLSS5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.26-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.26-beta.1) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.26-beta.1/NORDIC-DLSS5-Addon-v0.7.26-beta.1.zip)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.26-beta.2/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.26-beta.2) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.26-beta.2/NORDIC-DLSS5-Addon-v0.7.26-beta.2.zip)
 
-**Launcher 0.5.71 / Add-on Core 0.7.26**
+**Launcher 0.5.72 / Add-on Core 0.7.26**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in 0.5.71
+## What's new in 0.5.72
 
-- Added Film Softness to tame Bear (Model A) oversharpening and excessive microcontrast while retaining fine detail and color.
-- Added fine, organic, animated Film Grain, shaped by luminance to protect deep blacks and bright highlights.
-- Pair Film Softness with Native HDR or Cinema HDR to help reduce oversaturation and overly red faces or lips while retaining detail.
-- Both controls are available in **Look > Film**, save with your shared profiles and can be reset independently of the rest of your look.
-- Both start at zero, preserving your existing image until you enable them.
+- New installations start with **Gunko_Golden**, a Bear + Serpent profile with Cinema HDR, Film Grain 1.00 and Film Softness 0.10.
+- Existing users keep their selected default, saved profiles and per-game tuning when updating.
+- The original Gunko TW3 profile remains available. Existing users can select Gunko_Golden from Profiles when they want to try it.
 
 ## Skellig performance monitor
 
