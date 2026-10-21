@@ -1,26 +1,22 @@
 # NORDIC DLSS5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.16-beta.3/NordicDLSS5.exe) | [Beta 03 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.16-beta.3) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.16-beta.3/NORDIC-DLSS5-Addon-v0.7.16-beta.3.zip)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.17-beta.4/NordicDLSS5.exe) | [Beta 04 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.17-beta.4) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.17-beta.4/NORDIC-DLSS5-Addon-v0.7.17-beta.4.zip)
 
-**Launcher 0.5.58 / Add-on Core 0.7.16**
+**Launcher 0.5.59 / Add-on Core 0.7.17**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in Beta 03
+## What's new in Beta 04
 
-- Improved launcher responsiveness when selecting games, opening menus, moving or resizing the window and returning after inactivity.
-- Added **Skellig**, a separate performance monitor with five designs: Compact, Cinema, Instrument, Frost and Bare. View FPS, average FPS, frame time with a small graph, CPU and GPU temperatures and clock speeds when sensors are available.
-- Set Skellig's position and size from its launcher tab using the Frost Terminal preview. Supports 16:9, 21:9 and 32:9, with per-game layouts and a shared position for all games.
-- Added Native HDR, Cinema HDR and Emissive Guard profiles with adjustable HDR controls.
-- Improved rendering stability in the in-game Nordic panel.
-- Corrected Cinema and Snow hover coverage in Grid and Cinema views, softened Snow animation and refined settings, alignment and spacing.
-- Updated the launcher, installer and in-game panel with the Optical Warm logo. Refreshed the Windows icon, added the Made by GUNKO link and made the NJOL logo animation quicker with light lavender accents.
+- Fixed a startup crash affecting Baldur's Gate 3 with Nordic enabled and improved DX11 compatibility.
+- Added Skellig support for exclusive fullscreen in DX11 and DX12. Its five designs, position and size remain configurable from the launcher.
+- Clarified runtime and profile labels: **Latest NR · 310.9.16.0** identifies the current supported DLL; **Preset 1 · Classic** identifies the older network available inside that DLL. Your selected model and tuning are preserved.
 
 ## Skellig performance monitor
 
 Skellig runs as a separate app managed from its own launcher tab. Choose Compact, Cinema, Instrument, Frost or Bare. Set position and size on the Frost Terminal preview for 16:9, 21:9 or 32:9. Save for one game or share the position and monitor settings across all games while retaining their own design, size and on/off preference.
 
-Enable at game launch or use Start Skellig. F9 toggles visibility while the target game is focused. Use windowed or borderless mode; exclusive fullscreen is unsupported. Layout changes apply at the next Skellig start. Windows requests administrator permission for FPS capture. FPS and average FPS use application presents; generated display frames may differ. CPU sensors require Libre Hardware Monitor or Open Hardware Monitor with WMI enabled. Missing readings show N/D.
+Enable at game launch or use Start Skellig. F9 toggles visibility while the target game is focused. Supports windowed, borderless and exclusive fullscreen in DX11 and DX12. For fullscreen support, enable Skellig and launch the game from Nordic; restart the game after enabling this support for the first time. Layout changes apply at the next Skellig start. Windows requests administrator permission for FPS capture. FPS and average FPS use application presents; generated display frames may differ. CPU sensors require Libre Hardware Monitor or Open Hardware Monitor with WMI enabled. Missing readings show N/D.
 
 ## Your library, in a new light
 
