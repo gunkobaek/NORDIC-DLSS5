@@ -1,18 +1,14 @@
 # NORDIC DLSS5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.19-beta.6/NordicDLSS5.exe) | [Beta 06 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.19-beta.6) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.19-beta.6/NORDIC-DLSS5-Addon-v0.7.19-beta.6.zip)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.20-beta.8/NordicDLSS5.exe) | [Beta 08 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.20-beta.8) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.20-beta.8/NORDIC-DLSS5-Addon-v0.7.20-beta.8.zip)
 
-**Launcher 0.5.61 / Add-on Core 0.7.19**
+**Launcher 0.5.63 / Add-on Core 0.7.20**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in Beta 06
+## What's new in Beta 08
 
-- Fixed FG and FPS separation in Skellig. FG shows displayed frames, including generated frames. FPS now uses application-rendered frames before generation, including with Super Resolution enabled. When a reliable base-frame reading is unavailable, it shows N/D instead of a misleading value.
-- Improved the frame-time graph, including visible small variations and frame-pacing spikes. AVG and the graph follow application frames before generation.
-- Improved in-game panel stability and reduced flicker, triangles and streaking affecting Nordic, Skellig and the full ReShade interface.
-- Improved launcher startup and library responsiveness, with less repeated CPU work during installed-game checks.
-- Cached covers and discs appear sooner. Loading a disc no longer holds back its available cover, and ordinary state changes keep already-loaded artwork in place.
+- Fixed an installation block in Crimson Desert caused by shared crash-reporting helpers used by applications such as Corsair iCUE. Checks for the actual running game remain active.
 
 ## Skellig performance monitor
 
