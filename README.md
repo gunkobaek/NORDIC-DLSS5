@@ -1,17 +1,16 @@
 # NORDIC DLSS5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.22-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.22-beta.1) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.22-beta.1/NORDIC-DLSS5-Addon-v0.7.22-beta.1.zip)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.24-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.24-beta.1) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.24-beta.1/NORDIC-DLSS5-Addon-v0.7.24-beta.1.zip)
 
-**Launcher 0.5.65 / Add-on Core 0.7.22**
+**Launcher 0.5.67 / Add-on Core 0.7.24**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in 0.5.65
+## What's new in 0.5.67
 
-- Fixed flickering, triangles and visual corruption in the in-game interface with Frame Generation enabled, while retaining fullscreen support and the Frost Studio design.
-- Improved UI stability across Nordic, Skellig and the full ReShade interface.
-- Fixed the manual interface scale slider jumping toward the minimum. Resizing now applies when you release the slider.
-- Switching off automatic interface scaling retains the panel's current size. Manual size is saved across launches.
+- Added proper right padding to slider values in the in-game Frost Studio interface, keeping numbers clear of the border and scrollbar.
+- Improved spacing between sliders and their numeric values across advanced Look, HDR and interface settings.
+- Padding scales with interface size to keep the layout consistent at different resolutions.
 
 ## Skellig performance monitor
 
