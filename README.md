@@ -1,23 +1,24 @@
 # NORDIC DLSS5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.18-beta.5/NordicDLSS5.exe) | [Beta 05 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.18-beta.5) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.18-beta.5/NORDIC-DLSS5-Addon-v0.7.18-beta.5.zip)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.19-beta.6/NordicDLSS5.exe) | [Beta 06 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.19-beta.6) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.19-beta.6/NORDIC-DLSS5-Addon-v0.7.19-beta.6.zip)
 
-**Launcher 0.5.60 / Add-on Core 0.7.18**
+**Launcher 0.5.61 / Add-on Core 0.7.19**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in Beta 05
+## What's new in Beta 06
 
-- Added a global Nordic shortcut in Options. Set one key for all installed Nordic games and use it as the default for new installations. ReShade shortcut conflicts are checked before saving.
-- INS now opens the full ReShade interface, including other add-ons such as RenoDX, independently of Nordic. Open Nordic with backslash or your chosen launcher keybind.
-- Skellig now shows **FG** followed by **FPS** across all five designs. FG measures displayed frames, including generated frames when reported; FPS measures application frames before generation, including with Super Resolution enabled. AVG and the frame-time graph use application frames.
-- Preserved the existing Skellig artwork and refined the placement of the average counter and graph.
+- Fixed FG and FPS separation in Skellig. FG shows displayed frames, including generated frames. FPS now uses application-rendered frames before generation, including with Super Resolution enabled. When a reliable base-frame reading is unavailable, it shows N/D instead of a misleading value.
+- Improved the frame-time graph, including visible small variations and frame-pacing spikes. AVG and the graph follow application frames before generation.
+- Improved in-game panel stability and reduced flicker, triangles and streaking affecting Nordic, Skellig and the full ReShade interface.
+- Improved launcher startup and library responsiveness, with less repeated CPU work during installed-game checks.
+- Cached covers and discs appear sooner. Loading a disc no longer holds back its available cover, and ordinary state changes keep already-loaded artwork in place.
 
 ## Skellig performance monitor
 
 Skellig runs as a separate app managed from its own launcher tab. Choose Compact, Cinema, Instrument, Frost or Bare. Set position and size on the Frost Terminal preview for 16:9, 21:9 or 32:9. Save for one game or share the position and monitor settings across all games while retaining their own design, size and on/off preference.
 
-Enable at game launch or use Start Skellig. F9 toggles visibility while the target game is focused. Supports windowed, borderless and exclusive fullscreen in DX11 and DX12. For fullscreen support, enable Skellig and launch the game from Nordic; restart the game after enabling this support for the first time. Layout changes apply at the next Skellig start. Windows requests administrator permission for FPS capture. FG measures displayed frames, including generated frames when reported. FPS measures application frames before generation, including with Super Resolution enabled. AVG and the frame-time graph use application frames. Availability depends on game/driver telemetry; unsupported or unavailable values show N/D. CPU sensors require Libre Hardware Monitor or Open Hardware Monitor with WMI enabled. Missing readings show N/D.
+Enable at game launch or use Start Skellig. F9 toggles visibility while the target game is focused. Supports windowed, borderless and exclusive fullscreen in DX11 and DX12. For fullscreen support, enable Skellig and launch the game from Nordic; restart the game after enabling this support for the first time. Layout changes apply at the next Skellig start. Windows requests administrator permission for FPS capture. FG measures displayed frames, including generated frames when reported. FPS measures application frames before generation, including with Super Resolution enabled. AVG and the frame-time graph use application frames. FPS uses reliable application-frame timing before generation. When that timing is unavailable, FPS, AVG and the graph show N/D rather than an inferred base rate. Availability depends on game/driver telemetry and the installed add-on version. CPU sensors require Libre Hardware Monitor or Open Hardware Monitor with WMI enabled. Missing readings show N/D.
 
 ## Nordic and ReShade shortcuts
 
@@ -39,7 +40,7 @@ Accept Update now in the installed launcher, use Check for updates now, or downl
 
 The current NVIDIA NR 310.9.16.0 DLL includes the older Classic network under **Render Preset 1**. **Render Preset 2** selects the newer, faster network. These are separate from the Bear, Falcon and Serpent style buttons. Select Preset 1 on both passes for the full Classic look. Classic is the quality-focused option and uses more GPU resources; the preferred look depends on the game and scene.
 
-Open Profiles, choose **Gunko / TW3 / Classic NR** (`gunko_tw3_old_model`) and Apply to selected games. The default uses Gunko's TW3 Bear + Serpent tuning with Preset 1 on both passes and the current DLL. Applying a profile replaces tuning and creates a backup. The older signed 310.8.0.0 runtime remains available as a separate choice.
+Open Profiles, choose **Gunko / TW3** (`gunko_tw3_old_model`) and Apply to selected games. The default uses Gunko's TW3 Bear + Serpent tuning with Preset 1 on both passes and the current DLL. Applying a profile replaces tuning and creates a backup. The older signed 310.8.0.0 runtime remains available as a separate choice.
 
 Locate your own compatible nvngx_dlssnr.dll in the launcher. No NVIDIA runtime is included or downloaded. Nordic preserves each game's own DLSS SR, Ray Reconstruction, Frame Generation and Streamline DLLs. Restart the game after updating or switching runtime.
 
