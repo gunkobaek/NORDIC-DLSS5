@@ -1,14 +1,17 @@
 # NORDIC DLSS5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.20-beta.8/NordicDLSS5.exe) | [Beta 08 release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.20-beta.8) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.20-beta.8/NORDIC-DLSS5-Addon-v0.7.20-beta.8.zip)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.22-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.22-beta.1) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.22-beta.1/NORDIC-DLSS5-Addon-v0.7.22-beta.1.zip)
 
-**Launcher 0.5.63 / Add-on Core 0.7.20**
+**Launcher 0.5.65 / Add-on Core 0.7.22**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in Beta 08
+## What's new in 0.5.65
 
-- Fixed an installation block in Crimson Desert caused by shared crash-reporting helpers used by applications such as Corsair iCUE. Checks for the actual running game remain active.
+- Fixed flickering, triangles and visual corruption in the in-game interface with Frame Generation enabled, while retaining fullscreen support and the Frost Studio design.
+- Improved UI stability across Nordic, Skellig and the full ReShade interface.
+- Fixed the manual interface scale slider jumping toward the minimum. Resizing now applies when you release the slider.
+- Switching off automatic interface scaling retains the panel's current size. Manual size is saved across launches.
 
 ## Skellig performance monitor
 
