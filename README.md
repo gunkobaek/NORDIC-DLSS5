@@ -1,17 +1,18 @@
 # NORDIC 5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.28-beta.2/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.28-beta.2) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.28-beta.2/NORDIC-DLSS5-Addon-v0.7.28-beta.2.zip)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.29-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.29-beta.1) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.29-beta.1/NORDIC-DLSS5-Addon-v0.7.29-beta.1.zip)
 
-**Launcher 0.5.77 / Add-on Core 0.7.28**
+**Launcher 0.5.78 / Add-on Core 0.7.29**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in 0.5.77
+## What's new in 0.5.78
 
-- Automatically resolves the loader filename conflict with the recognized SCSKiller 1.4.0 D3D12 recorder by installing ReShade as dxgi.dll when that supported filename is free.
-- Preserves the existing SCSKiller DLL and configuration. Matching ReShade loaders are reused without creating a duplicate.
-- Supports the alternate DXGI route for games that dynamically load their renderer, including Expedition 33.
-- Unrecognized loader conflicts remain protected from automatic replacement. Existing profiles and image settings are preserved.
+- Fixes NGX initialization stopping after successful DX11 interception while DX12 remained unavailable. Unresolved hooks now retry independently, retaining valid trampolines after activation failures.
+- Adds NGX diagnostics: selected module, export targets, missing exports, hook creation/activation errors, API coverage and the first intercepted CreateFeature/EvaluateFeature result. Repeated unchanged messages are suppressed.
+- Detects games installed through the new Epic Games Launcher installation catalog, supports legacy Epic manifests and adds Battle.net discovery. Helper launchers are excluded when selecting the game executable.
+- Keeps Favorites in a separate section above other games in List, Grid and Cinema, regardless of sorting.
+- Renames Store to Platform and adds Clear files beside Install/Update. Cleanup previews the affected add-ons and creates a backup before removing files.
 
 ## Skellig performance monitor
 
