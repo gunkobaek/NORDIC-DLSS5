@@ -1,17 +1,18 @@
-# NORDIC DLSS5
+# NORDIC 5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.27-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.27-beta.1) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.27-beta.1/NORDIC-DLSS5-Addon-v0.7.27-beta.1.zip)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.28-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.28-beta.1) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.28-beta.1/NORDIC-DLSS5-Addon-v0.7.28-beta.1.zip)
 
-**Launcher 0.5.75 / Add-on Core 0.7.27**
+**Launcher 0.5.76 / Add-on Core 0.7.28**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in 0.5.75
+## What's new in 0.5.76
 
-- Updated the in-game add-on logo to match the launcher.
-- New Bear, Falcon and Serpent artwork in the GUNKO style.
-- Improved dropdown spacing for Rendered, Upscaled and Present, HDR modes, render presets and profiles.
-- Clearer option rows and more room around text and arrows at different interface scales.
+- NORDIC 5 is the new name, with the approved logo in the launcher, installer and Frost Studio.
+- Automatic updates for installed game add-ons are enabled by default. Previously saved update preferences are respected.
+- Improved update detection, including new packages sharing the same Core version and games hidden from the library.
+- Games that are running wait until they close; keep Nordic open to complete the updates.
+- Existing image settings, selected profiles, saved profile files and interface preferences are preserved.
 
 ## Skellig performance monitor
 
