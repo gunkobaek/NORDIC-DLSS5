@@ -1,17 +1,17 @@
 # NORDIC DLSS5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.26-beta.3/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.26-beta.3) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.26-beta.3/NORDIC-DLSS5-Addon-v0.7.26-beta.3.zip)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.26-beta.4/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.26-beta.4) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.26-beta.4/NORDIC-DLSS5-Addon-v0.7.26-beta.4.zip)
 
-**Launcher 0.5.73 / Add-on Core 0.7.26**
+**Launcher 0.5.74 / Add-on Core 0.7.26**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in 0.5.73
+## What's new in 0.5.74
 
-- Sort your library by favorites in List, Grid and Cinema views.
-- New hand-drawn snow hover with varied adjoining illustrations, preserved proportions and improved ultrawide coverage.
-- A fine illuminated outline follows game titles, with gradual fade-in and fade-out across every hover style.
-- Faster snow and title animations with smooth transitions.
+- New GUNKO OVA Nocturne branding: a redesigned NORDIC logo, Windows app icon and vintage illustrated mountain backdrop.
+- A more compact Library header gives the game list more room, with the same readable row sizes.
+- Spotlight leads the hover menu, followed by Snow, Cinema and None. Spotlight remains the default for new installations.
+- The illuminated title outline remains available across all hover styles.
 
 ## Skellig performance monitor
 
