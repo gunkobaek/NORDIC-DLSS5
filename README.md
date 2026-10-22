@@ -1,16 +1,17 @@
 # NORDIC DLSS5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.26-beta.2/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.26-beta.2) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.26-beta.2/NORDIC-DLSS5-Addon-v0.7.26-beta.2.zip)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.26-beta.3/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.26-beta.3) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.26-beta.3/NORDIC-DLSS5-Addon-v0.7.26-beta.3.zip)
 
-**Launcher 0.5.72 / Add-on Core 0.7.26**
+**Launcher 0.5.73 / Add-on Core 0.7.26**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in 0.5.72
+## What's new in 0.5.73
 
-- New installations start with **Gunko_Golden**, a Bear + Serpent profile with Cinema HDR, Film Grain 1.00 and Film Softness 0.10.
-- Existing users keep their selected default, saved profiles and per-game tuning when updating.
-- The original Gunko TW3 profile remains available. Existing users can select Gunko_Golden from Profiles when they want to try it.
+- Sort your library by favorites in List, Grid and Cinema views.
+- New hand-drawn snow hover with varied adjoining illustrations, preserved proportions and improved ultrawide coverage.
+- A fine illuminated outline follows game titles, with gradual fade-in and fade-out across every hover style.
+- Faster snow and title animations with smooth transitions.
 
 ## Skellig performance monitor
 
