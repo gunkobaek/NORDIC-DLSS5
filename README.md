@@ -1,18 +1,17 @@
 # NORDIC 5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.28-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.28-beta.1) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.28-beta.1/NORDIC-DLSS5-Addon-v0.7.28-beta.1.zip)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.28-beta.2/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.28-beta.2) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.28-beta.2/NORDIC-DLSS5-Addon-v0.7.28-beta.2.zip)
 
-**Launcher 0.5.76 / Add-on Core 0.7.28**
+**Launcher 0.5.77 / Add-on Core 0.7.28**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in 0.5.76
+## What's new in 0.5.77
 
-- NORDIC 5 is the new name, with the approved logo in the launcher, installer and Frost Studio.
-- Automatic updates for installed game add-ons are enabled by default. Previously saved update preferences are respected.
-- Improved update detection, including new packages sharing the same Core version and games hidden from the library.
-- Games that are running wait until they close; keep Nordic open to complete the updates.
-- Existing image settings, selected profiles, saved profile files and interface preferences are preserved.
+- Automatically resolves the loader filename conflict with the recognized SCSKiller 1.4.0 D3D12 recorder by installing ReShade as dxgi.dll when that supported filename is free.
+- Preserves the existing SCSKiller DLL and configuration. Matching ReShade loaders are reused without creating a duplicate.
+- Supports the alternate DXGI route for games that dynamically load their renderer, including Expedition 33.
+- Unrecognized loader conflicts remain protected from automatic replacement. Existing profiles and image settings are preserved.
 
 ## Skellig performance monitor
 
@@ -34,7 +33,7 @@ Nordic ON/OFF beside Play controls whether the add-on loads before starting a ga
 
 ## Update the launcher and games
 
-Accept Update now in the installed launcher, use Check for updates now, or download and run NordicDLSS5.exe. Then close your games, select them and choose Update selected, or use Update all installed game add-ons. Updating the launcher alone does not update the add-on files in games. Ordinary updates preserve existing tuning.
+Accept Update now in the installed launcher, use Check for updates now, or download and run NordicDLSS5.exe. Keep Nordic open to automatically update add-ons in already installed games. Running games wait until they close. Automatic game updates are enabled by default; a previously saved opt-out is respected. You can also select games and choose Update selected, or use Update all installed game add-ons. Existing profiles, tuning and interface preferences are preserved.
 
 ## Classic quality with the current DLL
 
