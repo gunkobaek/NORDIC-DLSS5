@@ -1,15 +1,17 @@
 # NORDIC 5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.30-beta.2/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.30-beta.2) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.30-beta.2/NORDIC-DLSS5-Addon-v0.7.30-beta.2.zip)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.30-beta.3/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.30-beta.3) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.30-beta.3/NORDIC-DLSS5-Addon-v0.7.30-beta.3.zip)
 
-**Launcher 0.5.80 / Add-on Core 0.7.30**
+**Launcher 0.5.81 / Add-on Core 0.7.30**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in 0.5.80
+## What's new in 0.5.81
 
-- Removes the remaining heart symbol from the library column header. Hearts beside individual games remain available for adding or removing Favorites. Favorites stay pinned above the rest of the library.
-- Includes the Core 0.7.30 DX12 compatibility fix and Epic Games/Battle.net platform icons from 0.5.79.
+- Gunko_Golden is now the only bundled look profile. The old bundled TW3 profile is removed from the installer, manual package and release downloads.
+- The shared launcher/add-on catalogue shows Golden once, while preserving existing personal profiles and explicit user defaults during ordinary upgrades. References to the retired bundled identifier resolve safely without recreating its file.
+- Retains compatibility with older profiles that omit HDR/Film fields and preserves verified Restore support for transactions containing the retired profile.
+- Includes the DX12 compatibility fix, Epic/Battle.net platform icons and the empty heart-column header from the preceding updates.
 
 ## Skellig performance monitor
 
