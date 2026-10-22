@@ -1,18 +1,15 @@
 # NORDIC 5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.30-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.30-beta.1) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.30-beta.1/NORDIC-DLSS5-Addon-v0.7.30-beta.1.zip)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.30-beta.2/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.30-beta.2) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.30-beta.2/NORDIC-DLSS5-Addon-v0.7.30-beta.2.zip)
 
-**Launcher 0.5.79 / Add-on Core 0.7.30**
+**Launcher 0.5.80 / Add-on Core 0.7.30**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in 0.5.79
+## What's new in 0.5.80
 
-- Fixes Nordic Neural Rendering remaining inactive in DX12 when existing in-memory NGX entry modifications prevent MinHook from attaching. The new export-resolution fallback was confirmed working by the affected TW3 tester: both neural passes execute with Frame Generation detected.
-- Preserves the existing NGX entry chain rather than overwriting unsupported entry code. Adds entry-byte and decoder diagnostics, with separate messages for fallback delivery and successful intercepted calls.
-- Fixes a separate MinHook relocation-boundary issue and adds regression coverage for the captured short-jump layout. The fallback covers subsequent export lookups; pointers cached before add-on initialization are not covered.
-- Removes redundant heart sorting. Favorites remain in their own section above other games in List, Grid and Cinema; the other column sorts still work within each section.
-- Adds matching Epic Games and Battle.net platform icons in the library and game overview.
+- Removes the remaining heart symbol from the library column header. Hearts beside individual games remain available for adding or removing Favorites. Favorites stay pinned above the rest of the library.
+- Includes the Core 0.7.30 DX12 compatibility fix and Epic Games/Battle.net platform icons from 0.5.79.
 
 ## Skellig performance monitor
 
