@@ -1,18 +1,20 @@
 # NORDIC 5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.31-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.31-beta.1)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.32-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.32-beta.1)
 
-**Launcher 0.5.83 / Add-on Core 0.7.31**
+**Launcher 0.5.84 / Add-on Core 0.7.32**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in 0.5.83
+## What's new in 0.5.84
 
-**Jata brings clean HDR screenshots to Nordic.** Capture directly from your DirectX 12 game, automatically tone-map HDR into shareable SDR/sRGB PNGs, and leave Nordic, ReShade and Skellig panels out of the picture. The game's own HUD remains. Highlight roll-off and color conversion adapt HDR scenes for ordinary screens; SDR captures retain their original range.
+**Jata now supports 64-bit DirectX 9/9Ex, 10/10.1, 11 and 12 games.** Capture the final game image after ReShade effects, without Nordic, ReShade or Skellig panels. The game's own HUD remains. DX11/DX12 HDR scenes are tone-mapped into shareable SDR/sRGB PNGs; DX9/DX10 SDR captures preserve the scene's original colors.
 
-Set your own capture shortcut, destination folder and HDR reference white in the **Jata** tab. Save for one game or all games. Match reference white to the game's paper white, restart after updating the addon, and press your shortcut in-game.
+Use **Jata → Enable Jata for this game** for a compatible game without Neural Rendering. The separate capture component does not require an NVIDIA NR runtime. Choose your shortcut, destination folder and HDR reference white; save for one game or all games. Restart the game after installing or updating its addon.
 
-This release also adds integrated CPU temperature, transparent and FPS-only Skellig layouts, a compact graph beside frametime, and fixes for Clair Obscur crashes and repeated neural ON/OFF switching. Personal profiles and neural tuning are preserved. [Full release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.31-beta.1).
+**Scope:** 64-bit executables only; no x86, OpenGL or Vulkan. DX9/DX10 support SDR output, while ambiguous legacy HDR formats are refused. DX9 capture may cause a brief readback hitch at the moment of the shot. Neural Rendering and Skellig's fullscreen renderer retain their own DX11/DX12 requirements. Tested with real DirectX/ReShade fixtures; compatibility is not universal. [Full release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.32-beta.1).
+
+The release retains integrated CPU temperature, transparent and FPS-only Skellig layouts, the compact graph beside frametime, and the Clair Obscur and repeated neural ON/OFF stability fixes. Personal profiles and tuning are preserved.
 
 ## Skellig performance monitor
 
@@ -58,7 +60,7 @@ Clean add-ons previews the exact files and saves a backup. Restore recovers the 
 
 ## Requirements and feedback
 
-Windows 10/11 x64, .NET Framework 4.8, Microsoft Edge WebView2 Runtime and a compatible NVIDIA NR runtime. Games need native DLSS inputs and a supported DirectX 11 or DirectX 12 executable. BG3 requires bg3_dx11.exe; Vulkan is unsupported. The beta is unsigned and compatibility varies by game and GPU.
+Windows 10/11 x64, .NET Framework 4.8, Microsoft Edge WebView2 Runtime and a compatible NVIDIA NR runtime. Neural Rendering needs native DLSS inputs and a supported DirectX 11 or DirectX 12 executable. Separate Jata capture supports 64-bit DX9/10 SDR and DX11/12 SDR/HDR without requiring the NVIDIA NR runtime. BG3 requires bg3_dx11.exe; Vulkan is unsupported. The beta is unsigned and compatibility varies by game and GPU.
 
 Report problems through [GitHub Issues](https://github.com/gunkobaek/NORDIC-DLSS5/issues) or your existing tester thread. Include the game, build, GPU/driver and steps to reproduce. Diagnostics exports a support bundle locally; review it before sharing. Nothing is uploaded automatically.
 
