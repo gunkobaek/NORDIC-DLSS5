@@ -1,23 +1,28 @@
 # NORDIC 5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.30-beta.3/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.30-beta.3) | [Manual add-on](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.30-beta.3/NORDIC-DLSS5-Addon-v0.7.30-beta.3.zip)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.31-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.31-beta.1)
 
-**Launcher 0.5.81 / Add-on Core 0.7.30**
+**Launcher 0.5.83 / Add-on Core 0.7.31**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in 0.5.81
+## What's new in 0.5.83
 
-- Gunko_Golden is now the only bundled look profile. The old bundled TW3 profile is removed from the installer, manual package and release downloads.
-- The shared launcher/add-on catalogue shows Golden once, while preserving existing personal profiles and explicit user defaults during ordinary upgrades. References to the retired bundled identifier resolve safely without recreating its file.
-- Retains compatibility with older profiles that omit HDR/Film fields and preserves verified Restore support for transactions containing the retired profile.
-- Includes the DX12 compatibility fix, Epic/Battle.net platform icons and the empty heart-column header from the preceding updates.
+**Jata brings clean HDR screenshots to Nordic.** Capture directly from your DirectX 12 game, automatically tone-map HDR into shareable SDR/sRGB PNGs, and leave Nordic, ReShade and Skellig panels out of the picture. The game's own HUD remains. Highlight roll-off and color conversion adapt HDR scenes for ordinary screens; SDR captures retain their original range.
+
+Set your own capture shortcut, destination folder and HDR reference white in the **Jata** tab. Save for one game or all games. Match reference white to the game's paper white, restart after updating the addon, and press your shortcut in-game.
+
+This release also adds integrated CPU temperature, transparent and FPS-only Skellig layouts, a compact graph beside frametime, and fixes for Clair Obscur crashes and repeated neural ON/OFF switching. Personal profiles and neural tuning are preserved. [Full release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.31-beta.1).
 
 ## Skellig performance monitor
 
-Skellig runs as a separate app managed from its own launcher tab. Choose Compact, Cinema, Instrument, Frost or Bare. Set position and size on the Frost Terminal preview for 16:9, 21:9 or 32:9. Save for one game or share the position and monitor settings across all games while retaining their own design, size and on/off preference.
+Skellig runs as a separate app managed from its own launcher tab. Choose Nocturne Strip, Atelier, Instrument, Strip Minimal, Clear Minimal or FPS Only. Clear Minimal has no background and can show a small frametime graph immediately beside the millisecond value. Choose individual metrics including CPU usage, clock, temperature and RAM usage. Save design, size and metrics for all games, with position saved separately; individual overrides remain available.
 
-Enable at game launch or use Start Skellig. F9 toggles visibility while the target game is focused. Supports windowed, borderless and exclusive fullscreen in DX11 and DX12. For fullscreen support, enable Skellig and launch the game from Nordic; restart the game after enabling this support for the first time. Layout changes apply at the next Skellig start. Windows requests administrator permission for FPS capture. FG measures displayed frames, including generated frames when reported. FPS measures application frames before generation, including with Super Resolution enabled. AVG and the frame-time graph use application frames. FPS uses reliable application-frame timing before generation. When that timing is unavailable, FPS, AVG and the graph show N/D rather than an inferred base rate. Availability depends on game/driver telemetry and the installed add-on version. CPU sensors require Libre Hardware Monitor or Open Hardware Monitor with WMI enabled. Missing readings show N/D.
+The global ON switch persists and starts Skellig with games launched through Nordic. F9 toggles visibility for the current session. Supports windowed, borderless and exclusive fullscreen in DirectX 11/12. Restart after first enabling fullscreen support or updating its renderer. Layout changes apply at the next Skellig start.
+
+FG measures displayed frames, including generated frames when reported. FPS measures application frames before generation, including with Super Resolution enabled. AVG and the graph use application frames. Unavailable telemetry shows N/D, not a guessed FG multiplier.
+
+CPU temperature is integrated through a bundled CPU-only sensor companion and signed PawnIO driver; no separate monitoring app is needed. Windows permission and occasionally a restart may be required for setup. Sensor availability depends on supported hardware; unavailable readings show N/D.
 
 ## Nordic and ReShade shortcuts
 
@@ -39,7 +44,7 @@ Accept Update now in the installed launcher, use Check for updates now, or downl
 
 The current NVIDIA NR 310.9.16.0 DLL includes the older Classic network under **Render Preset 1**. **Render Preset 2** selects the newer, faster network. These are separate from the Bear, Falcon and Serpent style buttons. Select Preset 1 on both passes for the full Classic look. Classic is the quality-focused option and uses more GPU resources; the preferred look depends on the game and scene.
 
-Open Profiles, choose **Gunko / TW3** (`gunko_tw3_old_model`) and Apply to selected games. The default uses Gunko's TW3 Bear + Serpent tuning with Preset 1 on both passes and the current DLL. Applying a profile replaces tuning and creates a backup. The older signed 310.8.0.0 runtime remains available as a separate choice.
+Open Profiles, choose **Gunko_Golden** and Apply to selected games. The default uses Gunko's TW3 Bear + Serpent tuning with Preset 1 on both passes and the current DLL. Applying a profile replaces tuning and creates a backup. The older signed 310.8.0.0 runtime remains available as a separate choice.
 
 Locate your own compatible nvngx_dlssnr.dll in the launcher. No NVIDIA runtime is included or downloaded. Nordic preserves each game's own DLSS SR, Ray Reconstruction, Frame Generation and Streamline DLLs. Restart the game after updating or switching runtime.
 
