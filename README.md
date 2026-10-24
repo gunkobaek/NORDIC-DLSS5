@@ -1,12 +1,18 @@
 # NORDIC 5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.32-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.32-beta.1)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.33-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.33-beta.1)
 
-**Launcher 0.5.84 / Add-on Core 0.7.32**
+**Launcher 0.5.85 / Add-on Core 0.7.33**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in 0.5.84
+## What's new in 0.5.85
+
+**Cleaner HDR screenshots.** Jata's highlight roll-off now follows the brightest color channel, so bright saturated light (sunlit cloth, hair, flowers, fire) keeps its texture instead of clipping flat. Neutral tones and SDR captures are unchanged. **Use this white for all games** sets the HDR reference white everywhere while keeping each game's folder and shortcut. Match it to your game's paper white (for RenoDX, its Game Brightness), not your display's peak.
+
+**Fixes:** the Nordic shortcut no longer fires while typing in ReShade or Nordic text fields; Skellig and Nordic frametime graphs stay continuous below 20 FPS; DX12 no longer drops game submissions when another overlay re-points the GPU queue; the DX11 bridge recovers after a neural recording error; Restore is no longer undone by automatic game updates; running helper processes make games wait instead of failing; an interrupted launcher update no longer blocks update checks. [Full release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.33-beta.1).
+
+## Jata capture (since 0.5.84)
 
 **Jata now supports 64-bit DirectX 9/9Ex, 10/10.1, 11 and 12 games.** Capture the final game image after ReShade effects, without Nordic, ReShade or Skellig panels. The game's own HUD remains. DX11/DX12 HDR scenes are tone-mapped into shareable SDR/sRGB PNGs; DX9/DX10 SDR captures preserve the scene's original colors.
 
