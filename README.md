@@ -1,16 +1,18 @@
 # NORDIC 5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.33-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.33-beta.1)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.34-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.34-beta.1)
 
-**Launcher 0.5.85 / Add-on Core 0.7.33**
+**Launcher 0.5.86 / Add-on Core 0.7.34**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in 0.5.85
+## What's new in 0.5.86
 
-**Cleaner HDR screenshots.** Jata's highlight roll-off now follows the brightest color channel, so bright saturated light (sunlit cloth, hair, flowers, fire) keeps its texture instead of clipping flat. Neutral tones and SDR captures are unchanged. **Use this white for all games** sets the HDR reference white everywhere while keeping each game's folder and shortcut. Match it to your game's paper white (for RenoDX, its Game Brightness), not your display's peak.
+**Screenshots you can hear.** Jata confirms every shot in game with a small "Screenshot saved" note, which never appears in the image, and an optional kantele sound. It can use RenoDX's Game Brightness as the HDR reference white with one click. An optional lossless HDR copy (.jxr) can be saved next to each PNG.
 
-**Fixes:** the Nordic shortcut no longer fires while typing in ReShade or Nordic text fields; Skellig and Nordic frametime graphs stay continuous below 20 FPS; DX12 no longer drops game submissions when another overlay re-points the GPU queue; the DX11 bridge recovers after a neural recording error; Restore is no longer undone by automatic game updates; running helper processes make games wait instead of failing; an interrupted launcher update no longer blocks update checks. [Full release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.33-beta.1).
+**Safer updates.** Nordic asks before updating your games. *Keep this game on its current Nordic version* stops automatic updates for that game. Only one Nordic window runs at a time, so two copies no longer fight over the same games. A GPU check warns before installing on a PC without an NVIDIA RTX card. Later updates no longer restyle your ReShade.ini.
+
+**Under the hood:** smoother neural rebuilds when the resolution changes; logs now show rebuild time, video memory and whether real DLSS depth and motion are used; crash reports are clearer; 32-bit games are reported instead of skipped silently. [Full release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.34-beta.1).
 
 ## Jata capture (since 0.5.84)
 
