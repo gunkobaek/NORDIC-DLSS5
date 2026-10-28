@@ -1,18 +1,20 @@
 # NORDIC 5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.34-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.34-beta.1)
+[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.35-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.35-beta.1)
 
-**Launcher 0.5.86 / Add-on Core 0.7.34**
+**Launcher 0.5.87 / Add-on Core 0.7.35**
 
 Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in 0.5.86
+## What's new in 0.5.87
 
-**Screenshots you can hear.** Jata confirms every shot in game with a small "Screenshot saved" note, which never appears in the image, and an optional kantele sound. It can use RenoDX's Game Brightness as the HDR reference white with one click. An optional lossless HDR copy (.jxr) can be saved next to each PNG.
+**Skellig on Unreal Engine 5 & elevated sessions.** `Skellig.addon64` now stays registered across Unreal Engine 5's temporary DirectX 12 startup probes (fixing missing overlays in games such as *Clair Obscur: Expedition 33*), dynamically reloads target executables and preferences from `session.ini`, and transitions cleanly when `Skellig.exe` runs with administrator permissions for CPU temperature sensors.
 
-**Safer updates.** Nordic asks before updating your games. *Keep this game on its current Nordic version* stops automatic updates for that game. Only one Nordic window runs at a time, so two copies no longer fight over the same games. A GPU check warns before installing on a PC without an NVIDIA RTX card. Later updates no longer restyle your ReShade.ini.
+**Automatic HDR reference white & screenshots you can hear.** Jata confirms every shot in game with a small "Screenshot saved" note, which never appears in the image, and an optional kantele sound. It now automatically detects and applies RenoDX's *Game Brightness* (`ToneMapGameNits`) in real time on every capture (or matches your Windows HDR display calibration), and can save an optional lossless HDR copy (`.jxr`) next to each PNG.
 
-**Under the hood:** smoother neural rebuilds when the resolution changes; logs now show rebuild time, video memory and whether real DLSS depth and motion are used; crash reports are clearer; 32-bit games are reported instead of skipped silently. [Full release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.34-beta.1).
+**Safer updates & library polish.** Nordic asks before updating your games, and *Keep this game on its current Nordic version* stops automatic updates for that game. Library Snow hover banks stay intact across star rating updates. Only one Nordic window runs at a time, and later updates no longer restyle your `ReShade.ini`.
+
+**Under the hood:** smoother neural rebuilds when the resolution changes; logs now show rebuild time, video memory and whether real DLSS depth and motion are used; crash reports are clearer; 32-bit games are reported instead of skipped silently. [Full release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.35-beta.1).
 
 ## Jata capture (since 0.5.84)
 
@@ -73,3 +75,4 @@ Windows 10/11 x64, .NET Framework 4.8, Microsoft Edge WebView2 Runtime and a com
 Report problems through [GitHub Issues](https://github.com/gunkobaek/NORDIC-DLSS5/issues) or your existing tester thread. Include the game, build, GPU/driver and steps to reproduce. Diagnostics exports a support bundle locally; review it before sharing. Nothing is uploaded automatically.
 
 [Made by GUNKO](https://gunko.com/)
+
