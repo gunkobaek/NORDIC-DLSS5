@@ -4,11 +4,14 @@
 
 **Launcher 1.0.0 / Add-on Core 1.0.0**
 
-Light up your game library. Nordic brings up to four independently tuned NVIDIA NR passes, multi-scale local relighting, saved looks and per-game controls to a warm, resizable game launcher.
+Light up your game library. Nordic brings up to four independently tuned NVIDIA NR passes, multi-scale local relighting, saved looks and per-game controls to a warm, resizable game launcher and in-game Frost Studio overlay.
 
-## Launcher Preview
+## In-Game Add-on & Launcher Preview
 
-### Library — List View & Selected Game Stage
+### In-Game Frost Studio Add-on (`\` / `F8`) & Skellig Performance HUD (`VRAM GiB`)
+![Nordic 5 In-Game Add-on UI and Skellig HUD](docs/screenshots/ingame-addon-ui.png)
+
+### Launcher — Library List View & Selected Game Stage
 ![Nordic 5 Library — List View](docs/screenshots/library-list.png)
 
 | Library — Grid View | Library — Cinema View |
@@ -25,15 +28,26 @@ Light up your game library. Nordic brings up to four independently tuned NVIDIA 
 
 ## What's new in 1.0.0 & recent releases
 
-**Multi-pass neural rendering & multi-scale local relighting (`v1.0.0`).** Chain up to four independent neural passes (Bear, Falcon, Serpent) with per-pass Intensity, Transfer, Follow Pass 1, Network Preset and Resolution Scale, paired with multi-scale local tone relighting (`0.00–2.00`), Cinema/Natural HDR highlight protection, a 31-axis Model Lab in Frost Studio, built-in DirectX 11-to-DirectX 12 GPU bridge and Nordic Flow 2x Frame Generation. [Full v1.0.0 release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.0).
+**Multi-pass neural rendering & multi-scale local relighting (`v1.0.0`).** Chain up to four independent neural passes (Bear, Falcon, Serpent) with per-pass Intensity, Transfer, Follow Pass 1, Network Preset (`Preset 1 Classic`, `Preset 2 Performance`, `Preset 3 Quality+ Extended`) and Resolution Scale, paired with multi-scale local tone relighting (`0.00–2.00`), Film Softness (`0.00–1.00`), Cinema/Natural HDR highlight protection, a 31-axis Model Lab in Frost Studio, built-in DirectX 11-to-DirectX 12 GPU bridge and Nordic Flow 2x Frame Generation. [Full v1.0.0 release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.0).
 
-**Skellig on Unreal Engine 5 & elevated sessions.** `Skellig.addon64` now stays registered across Unreal Engine 5's temporary DirectX 12 startup probes (fixing missing overlays in games such as *Clair Obscur: Expedition 33*), dynamically reloads target executables and preferences from `session.ini`, and transitions cleanly when `Skellig.exe` runs with administrator permissions for CPU temperature sensors.
+**Live GPU VRAM (`VRAM GiB`) in Skellig & Unreal Engine 5 fixes.** Skellig's `Clear Minimal` overlay now includes real-time GPU VRAM usage (`used/total GiB` via NVML) alongside FG, FPS, CPU %, CPU GHz, CPU/GPU temperature, system RAM and frametime graph. `Skellig.addon64` stays registered across Unreal Engine 5's temporary DirectX 12 startup probes (fixing missing overlays in games such as *Clair Obscur: Expedition 33*), dynamically reloads target executables and preferences from `session.ini`, and transitions cleanly when `Skellig.exe` runs with administrator permissions for CPU temperature sensors.
 
 **Automatic HDR reference white & screenshots you can hear.** Jata confirms every shot in game with a small "Screenshot saved" note, which never appears in the image, and an optional kantele sound. It now automatically detects and applies RenoDX's *Game Brightness* (`ToneMapGameNits`) in real time on every capture (or matches your Windows HDR display calibration), and can save an optional lossless HDR copy (`.jxr`) next to each PNG.
 
 **Safer updates & library polish.** Nordic asks before updating your games, and *Keep this game on its current Nordic version* stops automatic updates for that game. Library Snow hover banks stay intact across star rating updates. Only one Nordic window runs at a time, and later updates no longer restyle your `ReShade.ini`.
 
 **Under the hood:** smoother neural rebuilds when the resolution changes; logs now show rebuild time, video memory and whether real DLSS depth and motion are used; crash reports are clearer; 32-bit games are reported instead of skipped silently.
+
+## Architecture & File Transparency
+
+Nordic 5 is a self-contained Windows desktop launcher (`NordicDLSS5.exe`) and ReShade Add-on suite (`Gunko.addon64`, `Skellig.addon64`, `Jata.addon64`). It makes **zero background network connections** outside explicit GitHub release update checks and modifies **only** the game directories you explicitly select:
+
+- **`Gunko.addon64` & `Gunko/Gunko.nvngx.dll`**: Intercepts native DLSS inputs (`Color`, `Depth`, `MotionVectors`, `Exposure`) and dispatches the user-supplied signed NVIDIA `nvngx_dlssnr.dll` runtime on DirectX 12 (or via the shared-handle D3D11-to-D3D12 bridge for DirectX 11 games).
+- **`Skellig.exe` & `Skellig.addon64`**: Independent hardware-accelerated telemetry overlay powered by Intel PresentMon (MIT) and NVML (`nvml.dll`).
+- **`Jata.addon64`**: Clean post-ReShade, pre-UI screenshot capture with PQ/scRGB HDR-to-SDR tone mapping and automatic RenoDX `ToneMapGameNits` detection.
+- **Reproducible & Verifiable Release Digests (`v1.0.0`)**:
+  - `NordicDLSS5.exe` SHA-256: `a29eaef041002f0d00e1352c78f0f698616d5b5f388e032177b6b1047cc68c45`
+  - `Gunko.addon64` SHA-256: `0f4e37c2d0681f92a35cf7c9c20f9e5365ef2c896d6b0ff9c3e5a3102d1ef8b8`
 
 ## Jata capture (since 0.5.84)
 
@@ -47,7 +61,7 @@ The release retains integrated CPU temperature, transparent and FPS-only Skellig
 
 ## Skellig performance monitor
 
-Skellig runs as a separate app managed from its own launcher tab. Choose Nocturne Strip, Atelier, Instrument, Strip Minimal, Clear Minimal or FPS Only. Clear Minimal has no background and can show a small frametime graph immediately beside the millisecond value. Choose individual metrics including CPU usage, clock, temperature and RAM usage. Save design, size and metrics for all games, with position saved separately; individual overrides remain available.
+Skellig runs as a separate app managed from its own launcher tab. Choose Nocturne Strip, Atelier, Instrument, Strip Minimal, Clear Minimal or FPS Only. Clear Minimal has no background and can show a small frametime graph immediately beside the millisecond value. Choose individual metrics including CPU usage, clock, temperature, GPU temperature, **GPU VRAM (`VRAM GiB`)** and system RAM usage. Save design, size and metrics for all games, with position saved separately; individual overrides remain available.
 
 The global ON switch persists and starts Skellig with games launched through Nordic. F9 toggles visibility for the current session. Supports windowed, borderless and exclusive fullscreen in DirectX 11/12. Restart after first enabling fullscreen support or updating its renderer. Layout changes apply at the next Skellig start.
 
@@ -71,11 +85,14 @@ Nordic ON/OFF beside Play controls whether the add-on loads before starting a ga
 
 Accept Update now in the installed launcher, use Check for updates now, or download and run NordicDLSS5.exe. Keep Nordic open to automatically update add-ons in already installed games. Running games wait until they close. Automatic game updates are enabled by default; a previously saved opt-out is respected. You can also select games and choose Update selected, or use Update all installed game add-ons. Existing profiles, tuning and interface preferences are preserved.
 
-## Classic quality with the current DLL
+## Render Presets (1, 2 & 3) with the 310.9.16.0 DLL
 
-The current NVIDIA NR 310.9.16.0 DLL includes the older Classic network under **Render Preset 1**. **Render Preset 2** selects the newer, faster network. These are separate from the Bear, Falcon and Serpent style buttons. Select Preset 1 on both passes for the full Classic look. Classic is the quality-focused option and uses more GPU resources; the preferred look depends on the game and scene.
+The current NVIDIA NR `310.9.16.0` DLL supports three **Network Presets**, independent of the Bear, Falcon and Serpent style models:
+- **Preset 1 (`Quality / Classic`)**: Runs the legacy `310.8.0` neural graph included for backward compatibility. Uses more GPU compute time (~6.5 ms/pass at 4K 85%).
+- **Preset 2 (`Performance / Fast`)**: Runs the newer `310.9.16` Tensor architecture in fast mode.
+- **Preset 3 (`Quality+ / Extended`)**: Runs the newer `310.9.16` hardware-fused Tensor architecture with extended refinement blocks—delivering high spatial/temporal quality at nearly **2× the speed** of Preset 1 (~3.4 ms/pass at 4K 85%).
 
-Open Profiles, choose **Gunko_Golden** and Apply to selected games. The default uses Gunko's TW3 Bear + Serpent tuning with Preset 1 on both passes and the current DLL. Applying a profile replaces tuning and creates a backup. The older signed 310.8.0.0 runtime remains available as a separate choice.
+Open Profiles, choose **Gunko_Golden** and Apply to selected games. Applying a profile replaces tuning and creates a backup. The older signed 310.8.0.0 runtime remains available as a separate choice.
 
 Locate your own compatible nvngx_dlssnr.dll in the launcher. No NVIDIA runtime is included or downloaded. Nordic preserves each game's own DLSS SR, Ray Reconstruction, Frame Generation and Streamline DLLs. Restart the game after updating or switching runtime.
 
