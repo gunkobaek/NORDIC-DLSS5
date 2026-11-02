@@ -1,12 +1,31 @@
 # NORDIC 5
 
-[Download for Windows](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v0.7.35-beta.1/NordicDLSS5.exe) | [Latest beta release](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.35-beta.1)
+[Download for Windows (`NordicDLSS5.exe`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v1.0.0/NordicDLSS5.exe) | [Latest Release (`v1.0.0`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.0)
 
-**Launcher 0.5.87 / Add-on Core 0.7.35**
+**Launcher 1.0.0 / Add-on Core 1.0.0**
 
-Light up your game library. Nordic brings two independently tuned NVIDIA NR passes, saved looks and per-game controls to a warm, resizable game launcher.
+Light up your game library. Nordic brings up to four independently tuned NVIDIA NR passes, multi-scale local relighting, saved looks and per-game controls to a warm, resizable game launcher.
 
-## What's new in 0.5.87
+## Launcher Preview
+
+### Library — List View & Selected Game Stage
+![Nordic 5 Library — List View](docs/screenshots/library-list.png)
+
+| Library — Grid View | Library — Cinema View |
+| :---: | :---: |
+| ![Nordic 5 Library — Grid View](docs/screenshots/library-grid.png) | ![Nordic 5 Library — Cinema View](docs/screenshots/library-cinema.png) |
+
+### Profiles, Skellig Performance Monitor & Jata HDR → SDR Capture
+
+| Saved Looks & Multi-Pass Profiles | Skellig Performance Overlay Designer |
+| :---: | :---: |
+| ![Nordic 5 Profiles](docs/screenshots/profiles.png) | ![Nordic 5 Skellig Overlay Designer](docs/screenshots/skellig-overlay.png) |
+
+![Nordic 5 Jata HDR to SDR Capture](docs/screenshots/jata-capture.png)
+
+## What's new in 1.0.0 & recent releases
+
+**Multi-pass neural rendering & multi-scale local relighting (`v1.0.0`).** Chain up to four independent neural passes (Bear, Falcon, Serpent) with per-pass Intensity, Transfer, Follow Pass 1, Network Preset and Resolution Scale, paired with multi-scale local tone relighting (`0.00–2.00`), Cinema/Natural HDR highlight protection, a 31-axis Model Lab in Frost Studio, built-in DirectX 11-to-DirectX 12 GPU bridge and Nordic Flow 2x Frame Generation. [Full v1.0.0 release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.0).
 
 **Skellig on Unreal Engine 5 & elevated sessions.** `Skellig.addon64` now stays registered across Unreal Engine 5's temporary DirectX 12 startup probes (fixing missing overlays in games such as *Clair Obscur: Expedition 33*), dynamically reloads target executables and preferences from `session.ini`, and transitions cleanly when `Skellig.exe` runs with administrator permissions for CPU temperature sensors.
 
@@ -14,7 +33,7 @@ Light up your game library. Nordic brings two independently tuned NVIDIA NR pass
 
 **Safer updates & library polish.** Nordic asks before updating your games, and *Keep this game on its current Nordic version* stops automatic updates for that game. Library Snow hover banks stay intact across star rating updates. Only one Nordic window runs at a time, and later updates no longer restyle your `ReShade.ini`.
 
-**Under the hood:** smoother neural rebuilds when the resolution changes; logs now show rebuild time, video memory and whether real DLSS depth and motion are used; crash reports are clearer; 32-bit games are reported instead of skipped silently. [Full release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v0.7.35-beta.1).
+**Under the hood:** smoother neural rebuilds when the resolution changes; logs now show rebuild time, video memory and whether real DLSS depth and motion are used; crash reports are clearer; 32-bit games are reported instead of skipped silently.
 
 ## Jata capture (since 0.5.84)
 
@@ -70,9 +89,8 @@ Clean add-ons previews the exact files and saves a backup. Restore recovers the 
 
 ## Requirements and feedback
 
-Windows 10/11 x64, .NET Framework 4.8, Microsoft Edge WebView2 Runtime and a compatible NVIDIA NR runtime. Neural Rendering needs native DLSS inputs and a supported DirectX 11 or DirectX 12 executable. Separate Jata capture supports 64-bit DX9/10 SDR and DX11/12 SDR/HDR without requiring the NVIDIA NR runtime. BG3 requires bg3_dx11.exe; Vulkan is unsupported. The beta is unsigned and compatibility varies by game and GPU.
+Windows 10/11 x64, .NET Framework 4.8, Microsoft Edge WebView2 Runtime and a compatible NVIDIA NR runtime. Neural Rendering needs native DLSS inputs and a supported DirectX 11 or DirectX 12 executable. Separate Jata capture supports 64-bit DX9/10 SDR and DX11/12 SDR/HDR without requiring the NVIDIA NR runtime. BG3 requires bg3_dx11.exe; Vulkan is unsupported. Compatibility varies by game and GPU.
 
 Report problems through [GitHub Issues](https://github.com/gunkobaek/NORDIC-DLSS5/issues) or your existing tester thread. Include the game, build, GPU/driver and steps to reproduce. Diagnostics exports a support bundle locally; review it before sharing. Nothing is uploaded automatically.
 
 [Made by GUNKO](https://gunko.com/)
-
