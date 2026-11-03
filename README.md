@@ -46,8 +46,8 @@ Nordic 5 is a self-contained Windows desktop launcher (`NordicDLSS5.exe`) and Re
 - **`Skellig.exe` & `Skellig.addon64`**: Independent hardware-accelerated telemetry overlay powered by Intel PresentMon (MIT) and NVML (`nvml.dll`).
 - **`Jata.addon64`**: Clean post-ReShade, pre-UI screenshot capture with PQ/scRGB HDR-to-SDR tone mapping and automatic RenoDX `ToneMapGameNits` detection.
 - **Reproducible & Verifiable Release Digests (`v1.0.2`)**:
-  - `NordicDLSS5.exe` SHA-256: `a29eaef041002f0d00e1352c78f0f698616d5b5f388e032177b6b1047cc68c45`
-  - `Gunko.addon64` SHA-256: `0f4e37c2d0681f92a35cf7c9c20f9e5365ef2c896d6b0ff9c3e5a3102d1ef8b8`
+  - `NordicDLSS5.exe` SHA-256: `19994689f75cc7e3ed771a46975c57153ad48ba0009e4a27790532ca8298d48f`
+  - `Gunko.addon64` SHA-256: `24265d2d94e090ce28d4fbba38a5a5836be33d247c04c6fbc6ce82f45604a8e0`
 
 ## Jata capture (since 0.5.84)
 
