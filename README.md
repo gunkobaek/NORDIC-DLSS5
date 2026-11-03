@@ -45,9 +45,9 @@ Nordic 5 is a self-contained Windows desktop launcher (`NordicDLSS5.exe`) and Re
 - **`Gunko.addon64` & `Gunko/Gunko.nvngx.dll`**: Intercepts native DLSS inputs (`Color`, `Depth`, `MotionVectors`, `Exposure`) and dispatches the user-supplied signed NVIDIA `nvngx_dlssnr.dll` runtime on DirectX 12 (or via the shared-handle D3D11-to-D3D12 bridge for DirectX 11 games).
 - **`Skellig.exe` & `Skellig.addon64`**: Independent hardware-accelerated telemetry overlay powered by Intel PresentMon (MIT) and NVML (`nvml.dll`).
 - **`Jata.addon64`**: Clean post-ReShade, pre-UI screenshot capture with PQ/scRGB HDR-to-SDR tone mapping and automatic RenoDX `ToneMapGameNits` detection.
-- **Reproducible & Verifiable Release Digests (`v1.0.2`)**:
-  - `NordicDLSS5.exe` SHA-256: `19994689f75cc7e3ed771a46975c57153ad48ba0009e4a27790532ca8298d48f`
-  - `Gunko.addon64` SHA-256: `24265d2d94e090ce28d4fbba38a5a5836be33d247c04c6fbc6ce82f45604a8e0`
+- **Reproducible & Verifiable Release Digests (`v1.0.3`)**:
+  - `NordicDLSS5.exe` SHA-256: `eda63da2b77614f2693bc9a02e5ac8b7f803d4425be09c55e183d067bda26f96`
+  - `Gunko.addon64` SHA-256: `3c469e5609ac5fc2a79bb61141f03fa0621dde5cda2ca0545632b09cccb5ff73`
 
 ## Jata capture (since 0.5.84)
 
