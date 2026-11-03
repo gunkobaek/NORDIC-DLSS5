@@ -1,6 +1,6 @@
-﻿# NORDIC 5
+# NORDIC 5
 
-[Download for Windows (`NordicDLSS5.exe`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v1.0.1/NordicDLSS5.exe) | [Latest Release (`v1.0.1`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.1)
+[Download for Windows (`NordicDLSS5.exe`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v1.0.2/NordicDLSS5.exe) | [Latest Release (`v1.0.2`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.2)
 
 **Launcher 1.0.0 / Add-on Core 1.0.0**
 
@@ -28,7 +28,7 @@ Light up your game library. Nordic brings up to four independently tuned NVIDIA 
 
 ## What's new in 1.0.0 & recent releases
 
-**Multi-pass neural rendering & multi-scale local relighting (`v1.0.1`).** Chain up to four independent neural passes (Bear, Falcon, Serpent) with per-pass Intensity, Transfer, Follow Pass 1, Network Preset (`Preset 1 Classic`, `Preset 2 Performance`, `Preset 3 Quality+ Extended`) and Resolution Scale, paired with multi-scale local tone relighting (`0.00â€“2.00`), Film Softness (`0.00â€“1.00`), Cinema/Natural HDR highlight protection, a 31-axis Model Lab in Frost Studio, built-in DirectX 11-to-DirectX 12 GPU bridge and Nordic Flow 2x Frame Generation. [Full v1.0.1 release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.1).
+**Multi-pass neural rendering & multi-scale local relighting (`v1.0.2`).** Chain up to four independent neural passes (Bear, Falcon, Serpent) with per-pass Intensity, Transfer, Follow Pass 1, Network Preset (`Preset 1 Classic`, `Preset 2 Performance`, `Preset 3 Quality+ Extended`) and Resolution Scale, paired with multi-scale local tone relighting (`0.00â€“2.00`), Film Softness (`0.00â€“1.00`), Cinema/Natural HDR highlight protection, a 31-axis Model Lab in Frost Studio, built-in DirectX 11-to-DirectX 12 GPU bridge and Nordic Flow 2x Frame Generation. [Full v1.0.2 release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.2).
 
 **Live GPU VRAM (`VRAM GiB`) in Skellig & Unreal Engine 5 fixes.** Skellig's `Clear Minimal` overlay now includes real-time GPU VRAM usage (`used/total GiB` via NVML) alongside FG, FPS, CPU %, CPU GHz, CPU/GPU temperature, system RAM and frametime graph. `Skellig.addon64` stays registered across Unreal Engine 5's temporary DirectX 12 startup probes (fixing missing overlays in games such as *Clair Obscur: Expedition 33*), dynamically reloads target executables and preferences from `session.ini`, and transitions cleanly when `Skellig.exe` runs with administrator permissions for CPU temperature sensors.
 
@@ -45,7 +45,7 @@ Nordic 5 is a self-contained Windows desktop launcher (`NordicDLSS5.exe`) and Re
 - **`Gunko.addon64` & `Gunko/Gunko.nvngx.dll`**: Intercepts native DLSS inputs (`Color`, `Depth`, `MotionVectors`, `Exposure`) and dispatches the user-supplied signed NVIDIA `nvngx_dlssnr.dll` runtime on DirectX 12 (or via the shared-handle D3D11-to-D3D12 bridge for DirectX 11 games).
 - **`Skellig.exe` & `Skellig.addon64`**: Independent hardware-accelerated telemetry overlay powered by Intel PresentMon (MIT) and NVML (`nvml.dll`).
 - **`Jata.addon64`**: Clean post-ReShade, pre-UI screenshot capture with PQ/scRGB HDR-to-SDR tone mapping and automatic RenoDX `ToneMapGameNits` detection.
-- **Reproducible & Verifiable Release Digests (`v1.0.1`)**:
+- **Reproducible & Verifiable Release Digests (`v1.0.2`)**:
   - `NordicDLSS5.exe` SHA-256: `a29eaef041002f0d00e1352c78f0f698616d5b5f388e032177b6b1047cc68c45`
   - `Gunko.addon64` SHA-256: `0f4e37c2d0681f92a35cf7c9c20f9e5365ef2c896d6b0ff9c3e5a3102d1ef8b8`
 
