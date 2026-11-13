@@ -1,8 +1,8 @@
 # NORDIC 5
 
-[Download for Windows (`NordicDLSS5.exe`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v1.0.4/NordicDLSS5.exe) | [Latest Release (`v1.0.4`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.4)
+[Download for Windows (`NordicDLSS5.exe`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v1.0.5/NordicDLSS5.exe) | [Latest Release (`v1.0.5`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.5)
 
-**Launcher 1.0.4 / Add-on Core 1.0.4**
+**Launcher 1.0.5 / Add-on Core 1.0.5**
 
 Light up your game library. Nordic brings up to four independently tuned NVIDIA NR passes, multi-scale local relighting, saved looks and per-game controls to a warm, resizable game launcher and in-game Frost Studio overlay.
 
@@ -29,11 +29,13 @@ Light up your game library. Nordic brings up to four independently tuned NVIDIA 
 ### Activity — Update Queue & Session Log
 ![Nordic 5 Activity](docs/screenshots/activity.png)
 
-## What's new in 1.0.4 & recent releases
+## What's new in 1.0.5 & recent releases
+
+**Cleaner neural image, preset-switch fix & Battle.net library (`v1.0.5`).** The glow that outlined relit areas is gone, fringes along strong edges are reduced, and the correction no longer crawls in motion at a model resolution below 1. Measured with the real NVIDIA network on 4K HDR captures of *The Witcher 3*: motion instability about 65% lower, static flicker about 40% lower, edge overshoot about 45% lower, with the same overall look. Changing the network preset or model resolution no longer stalls the neural passes in games that keep two DLSS features alive (*The Witcher 3*: frame rate dropped and only the preset already built kept working). `Gunko.log` is opened once per session, rate limited and trimmed. Render Preset 3 is retired: it was the same network as Preset 2. DirectX 12 games without native DLSS use the color-only Present path without Always On. The launcher scans the Battle.net library (including *World of Warcraft: Forever*) and starts those games through the Battle.net client; online games with anti-cheat carry a warning and install only after you accept it, at your own risk, and may still refuse to load third-party add-ons. Next to `Installed` the launcher now says `not run yet` or `did not load` until a session of that build is recorded. [Full v1.0.5 release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.5).
 
 **New launcher interface & The Witcher 3 fast-travel flicker mitigation (`v1.0.4`).** One top bar with the NJOL mark, tabs, hover-effect picker and version pill; the Nordic dawn backdrop behind the library; 60 px rows with a status pill (`Installed · verified`, `Update available`), renderer and last session on a second line, white store icons, a floating selection bar and a fluid right-hand stage that never covers the title. The window no longer overflows on long status notices, and the hover title contour follows single-line titles exactly. Core 1.0.4 honors at most four consecutive DLSS `Reset` frames and then keeps its neural temporal history, for games that hold the flag after a loading screen (reported as flicker after fast travel in *The Witcher 3* with in-game Frame Generation). [Full v1.0.4 release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.4).
 
-**Multi-pass neural rendering & multi-scale local relighting (`v1.0.2`).** Chain up to four independent neural passes (Bear, Falcon, Serpent) with per-pass Intensity, Transfer, Follow Pass 1, Network Preset (`Preset 1 Classic`, `Preset 2 Performance`, `Preset 3 Quality+ Extended`) and Resolution Scale, paired with multi-scale local tone relighting (`0.00–2.00`), Film Softness (`0.00–1.00`), Cinema/Natural HDR highlight protection, a 31-axis Model Lab in Frost Studio, built-in DirectX 11-to-DirectX 12 GPU bridge and Nordic Flow 2x Frame Generation. [Full v1.0.2 release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.2).
+**Multi-pass neural rendering & multi-scale local relighting (`v1.0.2`).** Chain up to four independent neural passes (Bear, Falcon, Serpent) with per-pass Intensity, Transfer, Follow Pass 1, Network Preset (`Preset 1 Classic`, `Preset 2 Performance`) and Resolution Scale, paired with multi-scale local tone relighting (`0.00–2.00`), Film Softness (`0.00–1.00`), Cinema/Natural HDR highlight protection, a 31-axis Model Lab in Frost Studio, built-in DirectX 11-to-DirectX 12 GPU bridge and Nordic Flow 2x Frame Generation. [Full v1.0.2 release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.2).
 
 **Live GPU VRAM (`VRAM GiB`) in Skellig & Unreal Engine 5 fixes.** Skellig's `Clear Minimal` overlay now includes real-time GPU VRAM usage (`used/total GiB` via NVML) alongside FG, FPS, CPU %, CPU GHz, CPU/GPU temperature, system RAM and frametime graph. `Skellig.addon64` stays registered across Unreal Engine 5's temporary DirectX 12 startup probes (fixing missing overlays in games such as *Clair Obscur: Expedition 33*), dynamically reloads target executables and preferences from `session.ini`, and transitions cleanly when `Skellig.exe` runs with administrator permissions for CPU temperature sensors.
 
@@ -50,9 +52,9 @@ Nordic 5 is a self-contained Windows desktop launcher (`NordicDLSS5.exe`) and Re
 - **`Gunko.addon64` & `Gunko/Gunko.nvngx.dll`**: Intercepts native DLSS inputs (`Color`, `Depth`, `MotionVectors`, `Exposure`) and dispatches the user-supplied signed NVIDIA `nvngx_dlssnr.dll` runtime on DirectX 12 (or via the shared-handle D3D11-to-D3D12 bridge for DirectX 11 games).
 - **`Skellig.exe` & `Skellig.addon64`**: Independent hardware-accelerated telemetry overlay powered by Intel PresentMon (MIT) and NVML (`nvml.dll`).
 - **`Jata.addon64`**: Clean post-ReShade, pre-UI screenshot capture with PQ/scRGB HDR-to-SDR tone mapping and automatic RenoDX `ToneMapGameNits` detection.
-- **Reproducible & Verifiable Release Digests (`v1.0.4`)**:
-  - `NordicDLSS5.exe` SHA-256: `20ef1d3f56b744b0da418e6f02a0facfb4ccfab7a7bd2fa2daafd40ebedd277d`
-  - `Gunko.addon64` SHA-256: `bb652de48f749023504e14046c930c4459d304e079345a40ac2c9a52a051aba0`
+- **Reproducible & Verifiable Release Digests (`v1.0.5`)**:
+  - `NordicDLSS5.exe` SHA-256: `18f67a4d464d026be6b707ee916acd3425c72c279b7375de0dc9475a82cdffa9`
+  - `Gunko.addon64` SHA-256: `2e8bd2e0771e3e0604867be7df84411b62bf7b46b452cdf0bf09130bf67c37c3`
 
 ## Jata capture (since 0.5.84)
 
@@ -90,12 +92,12 @@ Nordic ON/OFF beside Play controls whether the add-on loads before starting a ga
 
 Accept Update now in the installed launcher, use Check for updates now, or download and run NordicDLSS5.exe. Keep Nordic open to automatically update add-ons in already installed games. Running games wait until they close. Automatic game updates are enabled by default; a previously saved opt-out is respected. You can also select games and choose Update selected, or use Update all installed game add-ons. Existing profiles, tuning and interface preferences are preserved.
 
-## Render Presets (1, 2 & 3) with the 310.9.16.0 DLL
+## Render Presets (1 & 2) with the 310.9.16.0 DLL
 
-The current NVIDIA NR `310.9.16.0` DLL supports three **Network Presets**, independent of the Bear, Falcon and Serpent style models:
+The current NVIDIA NR `310.9.16.0` DLL offers two **Network Presets**, independent of the Bear, Falcon and Serpent style models:
 - **Preset 1 (`Quality / Classic`)**: Runs the legacy `310.8.0` neural graph included for backward compatibility. Uses more GPU compute time (~6.5 ms/pass at 4K 85%).
-- **Preset 2 (`Performance / Fast`)**: Runs the newer `310.9.16` Tensor architecture in fast mode.
-- **Preset 3 (`Quality+ / Extended`)**: Runs the newer `310.9.16` hardware-fused Tensor architecture with extended refinement blocks—delivering high spatial/temporal quality at nearly **2× the speed** of Preset 1 (~3.4 ms/pass at 4K 85%).
+- **Preset 2 (`Performance / Fast`)**: Runs the newer `310.9.16` Tensor architecture at nearly **2× the speed** of Preset 1 (~3.4 ms/pass at 4K 85%).
+- **Preset 3** was retired in 1.0.5: on this runtime it selects the same network as Preset 2 and the image is identical pixel for pixel. A saved Preset 3 loads as Preset 2.
 
 Open Profiles, choose **Gunko_Golden** and Apply to selected games. Applying a profile replaces tuning and creates a backup. The older signed 310.8.0.0 runtime remains available as a separate choice.
 
