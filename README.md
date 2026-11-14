@@ -1,8 +1,8 @@
 # NORDIC 5
 
-[Download for Windows (`NordicDLSS5.exe`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v1.0.5/NordicDLSS5.exe) | [Latest Release (`v1.0.5`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.5)
+[Download for Windows (`NordicDLSS5.exe`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v1.0.6/NordicDLSS5.exe) | [Latest Release (`v1.0.6`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.6)
 
-**Launcher 1.0.5 / Add-on Core 1.0.5**
+**Launcher 1.0.6 / Add-on Core 1.0.6**
 
 Light up your game library. Nordic brings up to four independently tuned NVIDIA NR passes, multi-scale local relighting, saved looks and per-game controls to a warm, resizable game launcher and in-game Frost Studio overlay.
 
@@ -29,7 +29,9 @@ Light up your game library. Nordic brings up to four independently tuned NVIDIA 
 ### Activity — Update Queue & Session Log
 ![Nordic 5 Activity](docs/screenshots/activity.png)
 
-## What's new in 1.0.5 & recent releases
+## What's new in 1.0.6 & recent releases
+
+**Prugna Notte in-game overlay, enlarged Cascadia Mono, 1–100% pass resolution & fluid DLSS-G UI (`v1.0.6`).** The in-game Frost Studio overlay (`Gunko.addon64`) adopts the deep warm **Prugna Notte** palette (`#1F1421` shell, `#2B1D2D` inspector cards, `#C494F0` lilac-violet accents, `#F5EEF2` cream text) paired with enlarged Microsoft **Cascadia Mono** (`SIL OFL 1.1`, `FontSize=28` in `ReShade.ini`) for crisp technical monospace readability at 1080p, 1440p and 4K, while the desktop launcher keeps its classic warm NJOL dawn interface and theater spotlights untouched. Every neural pass now supports continuous **`1% – 100%`** model resolution scaling across the UI, `settings.ini`, `NeuralCore` and look profiles (preserving aspect ratio down to the 8-pixel-aligned `64 px` floor). Under DLSS Frame Generation 3x/4x, Frost Studio samples the unhooked OS cursor at full display refresh (with a `WM_INPUT` raw-mouse delta fallback when `ClipCursor` pins the pointer), queues temporal history resets atomically and saves `settings.ini` asynchronously off the Present thread. [Full v1.0.6 release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.6).
 
 **Cleaner neural image, preset-switch fix & Battle.net library (`v1.0.5`).** The glow that outlined relit areas is gone, fringes along strong edges are reduced, and the correction no longer crawls in motion at a model resolution below 1. Measured with the real NVIDIA network on 4K HDR captures of *The Witcher 3*: motion instability about 65% lower, static flicker about 40% lower, edge overshoot about 45% lower, with the same overall look. Changing the network preset or model resolution no longer stalls the neural passes in games that keep two DLSS features alive (*The Witcher 3*: frame rate dropped and only the preset already built kept working). `Gunko.log` is opened once per session, rate limited and trimmed. Render Preset 3 is retired: it was the same network as Preset 2. DirectX 12 games without native DLSS use the color-only Present path without Always On. The launcher scans the Battle.net library (including *World of Warcraft: Forever*) and starts those games through the Battle.net client; online games with anti-cheat carry a warning and install only after you accept it, at your own risk, and may still refuse to load third-party add-ons. Next to `Installed` the launcher now says `not run yet` or `did not load` until a session of that build is recorded. [Full v1.0.5 release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.5).
 
@@ -52,9 +54,9 @@ Nordic 5 is a self-contained Windows desktop launcher (`NordicDLSS5.exe`) and Re
 - **`Gunko.addon64` & `Gunko/Gunko.nvngx.dll`**: Intercepts native DLSS inputs (`Color`, `Depth`, `MotionVectors`, `Exposure`) and dispatches the user-supplied signed NVIDIA `nvngx_dlssnr.dll` runtime on DirectX 12 (or via the shared-handle D3D11-to-D3D12 bridge for DirectX 11 games).
 - **`Skellig.exe` & `Skellig.addon64`**: Independent hardware-accelerated telemetry overlay powered by Intel PresentMon (MIT) and NVML (`nvml.dll`).
 - **`Jata.addon64`**: Clean post-ReShade, pre-UI screenshot capture with PQ/scRGB HDR-to-SDR tone mapping and automatic RenoDX `ToneMapGameNits` detection.
-- **Reproducible & Verifiable Release Digests (`v1.0.5`)**:
-  - `NordicDLSS5.exe` SHA-256: `18f67a4d464d026be6b707ee916acd3425c72c279b7375de0dc9475a82cdffa9`
-  - `Gunko.addon64` SHA-256: `2e8bd2e0771e3e0604867be7df84411b62bf7b46b452cdf0bf09130bf67c37c3`
+- **Reproducible & Verifiable Release Digests (`v1.0.6`)**:
+  - `NordicDLSS5.exe` SHA-256: `2745bc0081066f23f52339e27e85ddb6b4119bc0ad440511f5aab9963f240a11`
+  - `Gunko.addon64` SHA-256: `220534f12947df2137bf28df634cb8783e99065f5d90bd7d19ddde4f7dd2ea6d`
 
 ## Jata capture (since 0.5.84)
 
