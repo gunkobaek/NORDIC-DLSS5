@@ -1,8 +1,8 @@
 # NORDIC 5
 
-[Download for Windows (`NordicDLSS5.exe`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v1.0.6/NordicDLSS5.exe) | [Latest Release (`v1.0.6`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.6)
+[Download for Windows (`NordicDLSS5.exe`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/download/v1.0.7/NordicDLSS5.exe) | [Latest Release (`v1.0.7`)](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.7)
 
-**Launcher 1.0.6 / Add-on Core 1.0.6**
+**Launcher 1.0.7 / Add-on Core 1.0.7**
 
 Light up your game library. Nordic brings up to four independently tuned NVIDIA NR passes, multi-scale local relighting, saved looks and per-game controls to a warm, resizable game launcher and in-game Frost Studio overlay.
 
@@ -29,7 +29,9 @@ Light up your game library. Nordic brings up to four independently tuned NVIDIA 
 ### Activity — Update Queue & Session Log
 ![Nordic 5 Activity](docs/screenshots/activity.png)
 
-## What's new in 1.0.6 & recent releases
+## What's new in 1.0.7 & recent releases
+
+**Calibrated Cascadia Mono spacing, readable slider tooltips, D3D12 fullscreen hygiene & optional support link (`v1.0.7`).** Look Inspector slider tooltips now render crisp warm-cream text inside every Prugna Notte tooltip bubble, and all overlay pills, pass cards, `Network Preset` selectors, `Before DLSS` / `After DLSS` / `Present` toggles, footer bars and `Settings` / `Fine-Tune` / `Model Lab` rows measure live `ImGui::CalcTextSize` widths in `Cascadia Mono` without overlap or drag jitter (clearing duplicate `LatinFont=` in `ReShade.ini`). DirectX 12 and Streamline `sl.dlss_g` startup and fullscreen transitions now bypass D3D11 Flow swapchain handlers cleanly, and `Skellig.exe` skips creating a standalone topmost window whenever `Skellig.addon64` is installed alongside `d3d12.dll` / `d3d11.dll` / `dxgi.dll`. The desktop launcher keeps its original warm NJOL interface and theater spotlights while adding a discreet, strictly optional `♥ Support NORDIC 5` footer link (all features remain 100% free). [Full v1.0.7 release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.7).
 
 **Prugna Notte in-game overlay, enlarged Cascadia Mono, 1–100% pass resolution & fluid DLSS-G UI (`v1.0.6`).** The in-game Frost Studio overlay (`Gunko.addon64`) adopts the deep warm **Prugna Notte** palette (`#1F1421` shell, `#2B1D2D` inspector cards, `#C494F0` lilac-violet accents, `#F5EEF2` cream text) paired with enlarged Microsoft **Cascadia Mono** (`SIL OFL 1.1`, `FontSize=28` in `ReShade.ini`) for crisp technical monospace readability at 1080p, 1440p and 4K, while the desktop launcher keeps its classic warm NJOL dawn interface and theater spotlights untouched. Every neural pass now supports continuous **`1% – 100%`** model resolution scaling across the UI, `settings.ini`, `NeuralCore` and look profiles (preserving aspect ratio down to the 8-pixel-aligned `64 px` floor). Under DLSS Frame Generation 3x/4x, Frost Studio samples the unhooked OS cursor at full display refresh (with a `WM_INPUT` raw-mouse delta fallback when `ClipCursor` pins the pointer), queues temporal history resets atomically and saves `settings.ini` asynchronously off the Present thread. [Full v1.0.6 release notes](https://github.com/gunkobaek/NORDIC-DLSS5/releases/tag/v1.0.6).
 
@@ -54,9 +56,9 @@ Nordic 5 is a self-contained Windows desktop launcher (`NordicDLSS5.exe`) and Re
 - **`Gunko.addon64` & `Gunko/Gunko.nvngx.dll`**: Intercepts native DLSS inputs (`Color`, `Depth`, `MotionVectors`, `Exposure`) and dispatches the user-supplied signed NVIDIA `nvngx_dlssnr.dll` runtime on DirectX 12 (or via the shared-handle D3D11-to-D3D12 bridge for DirectX 11 games).
 - **`Skellig.exe` & `Skellig.addon64`**: Independent hardware-accelerated telemetry overlay powered by Intel PresentMon (MIT) and NVML (`nvml.dll`).
 - **`Jata.addon64`**: Clean post-ReShade, pre-UI screenshot capture with PQ/scRGB HDR-to-SDR tone mapping and automatic RenoDX `ToneMapGameNits` detection.
-- **Reproducible & Verifiable Release Digests (`v1.0.6`)**:
-  - `NordicDLSS5.exe` SHA-256: `2745bc0081066f23f52339e27e85ddb6b4119bc0ad440511f5aab9963f240a11`
-  - `Gunko.addon64` SHA-256: `220534f12947df2137bf28df634cb8783e99065f5d90bd7d19ddde4f7dd2ea6d`
+- **Reproducible & Verifiable Release Digests (`v1.0.7`)**:
+  - `NordicDLSS5.exe` SHA-256: `5e6e9d50e3e07e6899484cf9788f392eb7b43a68acd6360f1e72b1c8198e4586`
+  - `Gunko.addon64` SHA-256: `1ded5fb5829135b5608f508e408653f8adb5be1726340e23cc23962183e3bb74`
 
 ## Jata capture (since 0.5.84)
 
